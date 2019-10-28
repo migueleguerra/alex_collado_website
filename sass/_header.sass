@@ -13,15 +13,18 @@
     opacity: .8
     -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
-  
+
   &__text-container
     grid-column: 8 / 12
     grid-row: 3 / span 3
+    display: flex
+    flex-direction: column
 
     &--h1
-      text-align: center
-    
-    &--p
-      margin: 3rem
+      align-self: center
 
-  
+    &--p
+      margin: 3rem 5rem
+
+    &--buttons
+      align-self: center
