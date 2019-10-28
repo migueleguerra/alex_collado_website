@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M35.4580897,4.99675106 L28.7004549,3.43729686 C27.9662119,3.26835599 27.2124757,3.65172182 26.9135803,4.34048075 L23.7946719,11.6179337 C23.5217674,12.2547108 23.7037037,13.0019493 24.243015,13.4372969 L28.1806368,16.6601689 C25.8414555,21.6439246 21.754386,25.7894737 16.6666667,28.1741391 L13.4437946,24.2365172 C13.0019493,23.697206 12.2612085,23.5152697 11.6244314,23.7881742 L4.34697848,26.9070826 C3.65172182,27.2124757 3.26835599,27.9662119 3.43729686,28.7004549 L4.99675106,35.4580897 C5.15919421,36.1598441 5.78297589,36.6666667 6.51721891,36.6666667 C23.1578948,36.6666667 36.6666668,23.1838857 36.6666668,6.51721891 C36.6666668,5.78947361 36.1663419,5.15919421 35.4580897,4.99675106 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="quote_form" transform="translate(-969.000000, -438.000000)">
+            <g id="form_email" transform="translate(422.000000, 426.000000)">
+                <g id="phone" transform="translate(544.000000, 9.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g></g>
+                    <g id="color/white-primary" mask="url(#mask-2)" fill="#CACACA" fill-rule="evenodd">
+                        <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M31.0258285,4.37215718 L25.112898,3.00763476 C24.4704354,2.85981149 23.8109162,3.19525659 23.5493827,3.79792066 L20.8203379,10.165692 C20.5815465,10.722872 20.7407408,11.3767056 21.2126381,11.7576348 L24.6580572,14.5776478 C22.6112736,18.9384341 19.0350877,22.5657895 14.5833333,24.6523717 L11.7633203,21.2069526 C11.3767056,20.7350552 10.7285575,20.575861 10.1713775,20.8146524 L3.80360617,23.5436972 C3.19525659,23.8109162 2.85981149,24.4704354 3.00763476,25.112898 L4.37215718,31.0258285 C4.51429493,31.6398636 5.0601039,32.0833334 5.70256654,32.0833334 C20.2631579,32.0833334 32.0833334,20.2858999 32.0833334,5.70256654 C32.0833334,5.06578941 31.6455491,4.51429493 31.0258285,4.37215718 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-1" transform="translate(-153.000000, -6464.000000)">
+            <g id="footer" transform="translate(-0.000000, 6418.000000)">
+                <g id="contact_container" transform="translate(150.000000, 43.000000)">
+                    <g id="phone">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g></g>
+                            <g id="color/white" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="Rectangle" x="0" y="0" width="35" height="35"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

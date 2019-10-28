@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>exclamation</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="quote_form" transform="translate(-1055.000000, -51.000000)" fill="#C6C4C4" fill-rule="nonzero">
+            <g id="timeline" transform="translate(215.000000, 50.000000)">
+                <g id="exclamation" transform="translate(840.000000, 1.000000)">
+                    <path d="M25,0 C11.1813477,0 0,11.1823242 0,25 C0,38.8186523 11.1823242,50 25,50 C38.8186523,50 50,38.8176758 50,25 C50,11.1813477 38.8176758,0 25,0 Z M25,46.09375 C13.3405273,46.09375 3.90625,36.6586914 3.90625,25 C3.90625,13.3405273 13.3413086,3.90625 25,3.90625 C36.6594727,3.90625 46.09375,13.3413086 46.09375,25 C46.09375,36.6594727 36.6586914,46.09375 25,46.09375 Z" id="Shape"></path>
+                    <path d="M25,12.5856445 C23.9212891,12.5856445 23.046875,13.4600586 23.046875,14.5387695 L23.046875,27.1162109 C23.046875,28.1949219 23.9212891,29.0693359 25,29.0693359 C26.0787109,29.0693359 26.953125,28.1949219 26.953125,27.1162109 L26.953125,14.5387695 C26.953125,13.4600586 26.0787109,12.5856445 25,12.5856445 Z" id="Path"></path>
+                    <circle id="Oval" cx="25" cy="34.0976562" r="2.63671875"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
