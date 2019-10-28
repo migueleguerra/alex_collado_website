@@ -1,2 +1,27 @@
 .header
   grid-column: full-start / full-end
+  background-image: url(../assets/img/header-background.png)
+  background-size: cover
+  background-position: bottom
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(6, 1fr)
+    height: 100%
+    background-color: $color-primary
+    opacity: .8
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
+  
+  &__text-container
+    grid-column: 8 / 12
+    grid-row: 3 / span 3
+
+    &--h1
+      text-align: center
+    
+    &--p
+      margin: 3rem
+
+  

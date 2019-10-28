@@ -9,7 +9,43 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+body {
+  font-family: "PingFang+SC", sans-serif;
+  line-height: 1.4; }
+
 .container {
   display: grid;
-  grid-template-rows: 95vh repeat(6, min-content);
+  grid-template-rows: 100vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(9, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end]; }
+
+.heading-1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #ffffff; }
+
+.paragraph-1 {
+  font-size: 1.7rem;
+  color: #ffffff; }
+
+.header {
+  grid-column: full-start / full-end;
+  background-image: url(../assets/img/header-background.png);
+  background-size: cover;
+  background-position: bottom; }
+  .header__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 100%;
+    background-color: #212021;
+    opacity: .8;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%); }
+  .header__text-container {
+    grid-column: 8 / 12;
+    grid-row: 3 / span 3; }
+    .header__text-container--h1 {
+      text-align: center; }
+    .header__text-container--p {
+      margin: 3rem; }

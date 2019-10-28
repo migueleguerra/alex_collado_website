@@ -1,6 +1,11 @@
 // COLOR VARIABLES
+$color-primary: #212021
+$color-secondary: #FCDE61
+$color-white: #ffffff
 
 // FONT VARIABLES
+$font-primary: 'PingFang+SC', sans-serif
+$font-secondary: 'Roboto', sans-serif
 $text-size: 1.7rem
 
 // BORDER
@@ -21,9 +26,11 @@ html
   box-sizing: border-box
   font-size: 62.5% // 10px/16px = 62.5% -> 1rem = 10px
 
+body
+  font-family: $font-primary
+  line-height: 1.4
+
 .container
   display: grid
-  grid-template-rows: 95vh repeat(6, min-content)
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(9,
-  [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem,
-  1fr) [full-end]
+  grid-template-rows: 100vh repeat(6, min-content)
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(9, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(5rem, 1fr) [full-end]
