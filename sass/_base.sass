@@ -1,16 +1,17 @@
 // COLOR
 $color-primary: #212021
 $color-secondary: #FCDE61
+$color-tertiary: #F0C824
 $color-white: #ffffff
 
 // FONT
 $font-primary: 'PingFang+SC', sans-serif
 $font-secondary: 'Roboto', sans-serif
-$text-size: 1.7rem
-$h1-text-size: 6rem
+$text-size: 1.6rem
 
 // BORDER
-$border: 1px solid rgba($color-secondary, .2)
+$border-primary: 1px solid rgba($color-secondary, .2)
+$border-secondary: 1px solid
 $border-radius: 2rem
 
 // BUTTONS
@@ -22,6 +23,15 @@ $shadow: 0 2rem 5rem rgba(#000, .2)
 
 // RESPONSIVE BREAKPOINTS
 
+// MARGIN
+.u-margin-bottom-small
+  margin-bottom: 2rem !important
+
+.u-margin-bottom-medium
+  margin-bottom: 5rem !important
+
+.u-margin-bottom-big
+  margin-bottom: 7rem !important
 *,
 *::before,
 *::after
@@ -38,6 +48,7 @@ body
   color: $color-primary
   background-color: $color-white
   line-height: 1.4
+  font-size: $text-size
 
 .container
   display: grid

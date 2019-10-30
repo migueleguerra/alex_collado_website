@@ -8,9 +8,10 @@
     font-family: $font-secondary
     font-size: $button-text-size
     cursor: pointer
-    border: $border
+    border: $border-primary
     border-radius: $border-radius
     min-width: 20rem
+    box-shadow: $shadow
 
   &--primary
     background-color: $color-secondary
@@ -27,3 +28,28 @@
     &:hover
       background-color: $color-secondary
       color: $color-primary
+
+.btn-wrapper:before
+  content: " "
+  width: 3rem
+  height: 0.2rem
+  background-color: $color-secondary
+  display: inline-block
+  margin-right: 1rem
+  vertical-align: super
+
+.btn-line
+  &,
+  &:link,
+  &:visited
+    text-transform: uppercase
+    text-decoration: none
+    border: none
+    cursor: pointer
+    background-color: transparent
+    font-size: 1.4rem
+    color: $color-secondary
+
+    &:hover
+      color: $color-tertiary
+      transform: $button-scale
