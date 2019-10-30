@@ -101,8 +101,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
   background-image: url(../assets/img/header-background3.jpg);
-  background-size: cover;
-  background-position: bottom; }
+  background-size: cover; }
   .header__background {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -260,3 +259,32 @@ body {
         background-color: #ffffff; }
       .testimonials__container--cards img {
         height: 10rem; }
+
+.gallery {
+  display: grid;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  padding: 5rem; }
+  .gallery > * {
+    height: 30rem;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  .gallery--1 {
+    background-image: url(../assets/img/gallery1.jpg); }
+  .gallery--2 {
+    background-image: url(../assets/img/gallery2.jpg); }
+  .gallery--3 {
+    background-image: url(../assets/img/gallery3.jpg); }
+  .gallery--4 {
+    background-image: url(../assets/img/gallery4.jpg); }
+  .gallery--5 {
+    background-image: url(../assets/img/gallery5.jpg); }
+  .gallery--6 {
+    background-image: url(../assets/img/gallery6.jpg); }
+  .gallery--7 {
+    background-image: url(../assets/img/gallery7.jpg); }
+  .gallery--8 {
+    background-image: url(../assets/img/gallery8.jpg); }
