@@ -122,7 +122,7 @@ body {
       position: relative;
       bottom: -3.5rem;
       height: 2px;
-      width: 0%;
+      width: 0;
       background-color: #F0C824;
       transition: all ease-in-out 250ms; }
     .nav__links li a:hover::before {
