@@ -1,0 +1,55 @@
+.nav
+  grid-column: center-start / center-end
+  font-size: 2rem
+  grid-row: 1 / 2
+  display: flex
+  justify-content: flex-end
+  height: 10vh
+  z-index: 3
+
+  &__links
+    display: flex
+    padding: 3rem 10rem 0 0
+    list-style: none
+
+    li:not(:last-child)
+      margin-right: 5rem
+
+    li a
+      text-decoration: none
+      color: $color-white
+      transition: all 0.3s ease 0s
+
+    li a::before
+      content: ""
+      display: block
+      position: relative
+      bottom: -3.5rem
+      height: 2px
+      width: 0%
+      background-color: $color-tertiary
+      transition: all ease-in-out 250ms
+
+    li a:hover::before
+      width: 100%
+
+    li a:hover
+      color: $color-tertiary
+
+  &__language
+    display: flex
+    padding: 3rem
+    list-style: none
+
+    li a
+      text-decoration: none
+      color: $color-white
+      padding-right: 1rem
+      transition: all 0.3s ease 0s
+
+    li a:hover
+      color: $color-tertiary
+
+
+
+
