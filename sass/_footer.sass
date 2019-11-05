@@ -8,50 +8,53 @@
     grid-template-columns: repeat(6, 1fr)
     color: $color-white
 
-    &--contact
-      grid-column: 2 / 3
-      height: 25vh
+  &__contact
+    grid-column: 2 / 3
+    height: 25vh
+    display: flex
+    flex-direction: column
+    padding-top: 4rem
+
+    &--phone
       display: flex
-      flex-direction: column
-      padding-top: 4rem
-
-      &--phone
-        display: flex
-        margin-bottom: 1rem
-
-        object
-          width: 2.5rem
-          height: 2.5rem
-          margin-right: 2rem
-
-        a
-          text-decoration: none
-          color: $color-white
-
-      &--email
-        display: flex
-
-        object
-          width: 2.5rem
-          height: 2.5rem
-          margin-right: 2rem
-
-        a
-          text-decoration: none
-          color: $color-white
-
-    &--copyright
-      grid-column: 3 / 5
+      margin-bottom: 1rem
+    
+    &--email
       display: flex
-      align-items: flex-end
-      justify-self: center
-      padding-bottom: 2rem
 
-    &--social
-      grid-column: 5 / 6
-      padding-top: 5rem
+    &--icon
+      width: 2.5rem
+      height: 2.5rem
+      margin-right: 2rem
 
-      a
-        text-decoration: none
-        margin-right: 1rem
+    &--a
+      text-decoration: none
+      color: $color-white
+
+    &--a:hover
+      color: $color-secondary
+      
+    &--a:focus
+      color: $color-secondary
+
+  &__copyright
+    grid-column: 3 / 5
+    display: flex
+    align-items: flex-end
+    justify-self: center
+    padding-bottom: 2rem
+
+  &__social
+    grid-column: 5 / 6
+    padding-top: 5rem
+
+    a
+      text-decoration: none
+      margin-right: 1rem
+
+    &--icon
+      cursor: pointer
+      
+    &--icon:hover
+      fill: $color-secondary
 

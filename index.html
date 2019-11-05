@@ -36,8 +36,8 @@
             vacations and private events in Playa del Carmen, Cancun, Riviera Maya, and the
             surrounding areas.</p>
           <div class="header__text-container--buttons">
-            <button class="btn btn--primary">get service</button>
-            <button class="btn btn--secondary">contact me</button>
+            <a href="#section-form" class="btn btn--primary">get service</a>
+            <a href="templates/contact-form.html" class="btn btn--secondary">contact me</a>
           </div>
         </div>
     </header>
@@ -59,11 +59,11 @@
               kitchens. I had work in some of the best restaurants with Micheline star reputation.
             </p>
             <div class="btn-wrapper u-margin-bottom-medium">
-              <button class="btn-line">more</button>
+              <a href="#popup-about-me" class="btn-line">more</a>
             </div>
           </div>
           <div class="about-me__text-container--button">
-            <button class="btn btn--primary">hire me</button>
+            <a href="templates/contact-form.html" class="btn btn--primary">hire me</a>
           </div>
         </div>
         <div class="about-me__img-container">
@@ -124,7 +124,7 @@
 
       </div>
       <div class="services__button">
-        <button class="btn btn--primary">get service</button>
+        <a href="#section-form" class="btn btn--primary">get service</a>
       </div>
     </section>
 
@@ -178,38 +178,53 @@
       <div class="gallery--8"></div>
     </section>
 
-    <section class="form">
+    <section class="form" id="section-form">
       <div class="form__container">
         <img class="u-margin-bottom-medium" src="assets/img/plate3.png"
              alt="Mezcal Playa del Carmen">
         <h2 class="heading--2">Get your service</h2>
         <p class="paragraph-1 u-margin-bottom-big">An unforgettable experience</p>
-        <button class="btn btn--primary">get service</button>
+        <a href="templates/contact-form.html" class="btn btn--primary">get service</a>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__container--contact">
-          <div class="footer__container--contact--phone">
-            <object data="assets/icons/phone-form.svg" type="image/svg+xml"></object>
-            <a class="paragraph-1" href="tel:5531097762">5531097762</a>
+        <div class="footer__contact">
+          <div class="footer__contact--phone">
+              <svg class="footer__contact--icon">
+                <use xlink:href="assets/icons/phone-form.svg"/>
+              </svg>
+            <a class="footer__contact--a paragraph-1" href="tel:5531097762">5531097762</a>
           </div>
-          <div class="footer__container--contact--email">
-            <object data="assets/icons/envelope.svg" type="image/svg+xml"></object>
-            <a class="paragraph-1" href="mailto:chefalexco@gmail.com">chefalexco@gmail.com</a>
+          <div class="footer__contact--email">
+              <svg class="footer__contact--icon">
+                <use xlink:href="assets/icons/envelope.svg"/>
+              </svg>
+            <a class="footer__contact--a paragraph-1"
+              href="mailto:chefalexco@gmail.com">chefalexco@gmail.com</a>
           </div>
         </div>
-        <div class="footer__container--copyright">
+        <div class="footer__copyright">
           <p>&#169; Copyright 2019 by Siria Lerma & Miguel Guerra</p>
         </div>
-        <div class="footer__container--social">
-          <a href="#"><object data="assets/icons/instagram.svg" type="image/svg+xml"></object></a>
-          <a href="#"><object data="assets/icons/medium.svg" type="image/svg+xml"></object></a>
+        <div class="footer__social">
           <a href="#">
-            <object data="assets/icons/twitter-square.svg" type="image/svg+xml"></object>
+            <object class="footer__social--icon" data="assets/icons/instagram.svg" 
+              type="image/svg+xml"></object>
+          </a> 
+          <a href="#">
+            <object class="footer__social--icon" data="assets/icons/medium.svg" 
+              type="image/svg+xml"></object>
           </a>
-          <a href="#"><object data="assets/icons/whatsapp.svg" type="image/svg+xml"></object></a>
+          <a href="#">
+            <object class="footer__social--icon" data="assets/icons/twitter-square.svg" 
+              type="image/svg+xml"></object>
+          </a>
+          <a href="#">
+            <object class="footer__social--icon" data="assets/icons/whatsapp.svg" 
+              type="image/svg+xml"></object>
+          </a>
         </div>
       </div>
     </footer>
@@ -229,7 +244,7 @@
             Quibusdam nesciunt, expedita voluptate magnam impedit illum, minus mollitia dolorum
             facere enim a. Aliquam neque ratione minima dolor, sed incidunt ut doloribus.
           </p>
-          <button class="btn btn--primary">get service</button>
+          <a href="#section-form" class="btn btn--primary">get service</a>
         </div>
         <div class="popup__right">
           <div class="popup__right--container">
@@ -257,7 +272,7 @@
             Quibusdam nesciunt, expedita voluptate magnam impedit illum, minus mollitia dolorum
             facere enim a. Aliquam neque ratione minima dolor, sed incidunt ut doloribus.
           </p>
-          <button class="btn btn--primary">get service</button>
+          <a href="#section-form" class="btn btn--primary">get service</a>
         </div>
         <div class="popup__right">
           <div class="popup__right--container">
@@ -285,7 +300,7 @@
             Quibusdam nesciunt, expedita voluptate magnam impedit illum, minus mollitia dolorum
             facere enim a. Aliquam neque ratione minima dolor, sed incidunt ut doloribus.
           </p>
-          <button class="btn btn--primary">get service</button>
+          <a href="#section-form" class="btn btn--primary">get service</a>
         </div>
         <div class="popup__right">
           <div class="popup__right--container">
@@ -297,5 +312,29 @@
         </div>
       </div>
     </div>
+
+    <div class="popup" id="popup-about-me">
+      <div class="popup__container">
+        <a href="#section-about-me" class="popup__close">&times;</a>
+        <div class="popup__left">
+          <h2 class="heading--2 u-margin-bottom-big">Alex Collado</h2>
+          <p class="popup__text u-margin-bottom-big">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit commodi ad non
+            quidem earum voluptatibus aut a dolores, ab, natus voluptatum? Quibusdam reprehenderit
+            eligendi harum iure eveniet similique quis voluptatibus! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quibusdam nesciunt, expedita voluptate magnam impedit
+            illum, minus mollitia dolorum facere enim a. Aliquam neque ratione minima dolor, sed         incidunt ut doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quibusdam nesciunt, expedita voluptate magnam impedit illum, minus mollitia dolorum
+            facere enim a. Aliquam neque ratione minima dolor, sed incidunt ut doloribus.
+          </p>
+          <a href="#section-form" class="btn btn--primary">hire me</a>
+        </div>
+        <div class="popup__right">
+          <img class="popup__img--about-me" src="../assets/img/about-me.jpg" 
+            alt="Chef Privado Playa del Carmen">
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
