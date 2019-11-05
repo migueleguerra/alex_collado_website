@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900&display=swap);
+@import url(//db.onlinewebfonts.com/c/752149278afff657a3b77d75b35463fc?family=PingFang+SC);
 .u-margin-bottom-small {
   margin-bottom: 2rem !important; }
 
@@ -97,6 +99,79 @@ body {
   .btn-line:hover, .btn-line:link:hover, .btn-line:visited:hover {
     color: #F0C824;
     transform: scale(1.05); }
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
+  .popup__container {
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    padding: 5rem;
+    background-color: #ffffff; }
+  .popup__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5rem; }
+  .popup__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .popup__right--container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem; }
+      .popup__right--container > * {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 2rem;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  .popup__text {
+    max-width: 40rem; }
+  .popup__img--1 {
+    background-image: url(../../assets/img/gallery1.jpg); }
+  .popup__img--2 {
+    background-image: url(../../assets/img/gallery2.jpg); }
+  .popup__img--3 {
+    background-image: url(../../assets/img/gallery3.jpg); }
+  .popup__img--4 {
+    background-image: url(../../assets/img/gallery4.jpg); }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #212021;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 4rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #F0C824; }
 
 .nav {
   grid-column: center-start / center-end;
@@ -211,7 +286,7 @@ body {
 
 .services {
   grid-column: full-start / full-end;
-  height: 130vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,6 +311,8 @@ body {
       max-height: 50rem;
       overflow: hidden;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
       display: grid;
       grid-template-rows: repeat(2, 1fr); }
       .services__cards--container__background {
@@ -257,8 +334,9 @@ body {
         margin: 3rem 2rem 2rem 2rem; }
       .services__cards--container__private-chef-img {
         position: absolute;
-        height: 35rem;
-        right: -10rem; }
+        height: 30rem;
+        right: -8rem;
+        bottom: -8rem; }
       .services__cards--container__cooking-classes-img {
         position: absolute;
         height: 45rem;
@@ -399,3 +477,42 @@ body {
       .footer__container--social a {
         text-decoration: none;
         margin-right: 1rem; }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact-form > *:not(:last-child) {
+    margin-bottom: 2rem; }
+  .contact-form__group {
+    display: flex;
+    flex-direction: column; }
+  .contact-form__label {
+    margin-bottom: 0.5rem; }
+  .contact-form__input:required {
+    box-shadow: none; }
+  .contact-form__input {
+    padding: 1.5rem 2rem;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid;
+    min-width: 40rem; }
+    .contact-form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #F0C824; }
+    .contact-form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+
+textarea {
+  font-family: inherit;
+  font-size: 1.5rem;
+  height: 15rem; }

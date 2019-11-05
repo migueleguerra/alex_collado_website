@@ -10,28 +10,28 @@
     <title>Alex Collado - Contact Form</title>
   </head>
   <body class="contact">
-    <div class="contact__container">
-      <form action="#" class="contact-form">
-        <div class="contact-form__group">
-          <label for="name" class="contact-form__label">Name</label>
-          <input id="name" type="text" class="contact-form__input" placeholder="Name">
-        </div>
+    <a href="/" class="popup__close">&times;</a>
+    <form action="" class="contact-form paragraph-1">
+      <div class="contact-form__group">
+        <label for="name" class="contact-form__label">Name:</label>
+        <input id="name" type="text" class="contact-form__input" placeholder="Name" required>
+      </div>
 
-        <div class="contact-form__group">
-          <label for="email" class="contact-form__label">Email</label>
-          <input id="email" type="email" class="contact-form__input" placeholder="email">
-        </div>
+      <div class="contact-form__group">
+        <label for="email" class="contact-form__label">Email:</label>
+        <input id="email" type="email" class="contact-form__input" placeholder="Email" required>
+      </div>
 
-        <div class="contact-form__group">
-          <label for="message" class="contact-form__label">Message</label>
-          <textarea
-              name="message" id="message" class="contact-form__textarea" cols="30" rows="5"></textarea>
-        </div>
+      <div class="contact-form__group">
+        <label for="message" class="contact-form__label">Message:</label>
+        <textarea
+            name="message" id="message" class="contact-form__input" placeholder="Message">
+        </textarea>
+      </div>
 
-        <div class="contact-form__group">
-          <button class="btn btn--primary">Send</button>
-        </div>
-      </form>
-    </div>
+      <div class="contact-form__group">
+        <button class="btn btn--primary">Send</button>
+      </div>
+    </form>
   </body>
 </html>
