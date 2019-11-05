@@ -17,15 +17,49 @@
     -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
 
-  &__text-container
-    grid-column: 2 / -1
-    grid-row: 1 / 2
-    z-index: 2
-    position: relative
+    @media only screen and (max-width: $bp-large)
+      -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 70% 100%)
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 60% 100%)
+
+    @media only screen and (max-width: $bp-medium)
+      -webkit-clip-path: none
+      clip-path: none
+      background-color: transparent
+
+  &__container
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
 
+    @media only screen and (max-width: $bp-medium)
+      background-color: $color-primary
+      padding: 5rem
+      border-radius: $border-radius
+      opacity: .8
+
+  &__text-container
+    grid-column: 2 / -1
+    grid-row: 1 / 2
+    z-index: 2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @media only screen and (max-width: $bp-large)
+      margin-right: 2rem
+
+    @media only screen and (max-width: $bp-medium)
+      grid-column: 1 / -1
+      margin-right: 0
+
     &--p
+      text-align: center
       max-width: 50rem
+
+    &--buttons
+      display: flex
+
+      @media only screen and (max-width: $bp-small)
+        flex-direction: column

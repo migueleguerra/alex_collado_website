@@ -64,6 +64,10 @@ body {
   border-radius: 2rem;
   min-width: 20rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 50em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 1.5rem 3rem;
+      min-width: 0; } }
 
 .btn--primary {
   text-align: center;
@@ -79,6 +83,7 @@ body {
     transform: scale(1.05); }
 
 .btn--secondary {
+  text-align: center;
   background-color: transparent;
   border-color: #FCDE61;
   color: #FCDE61;
@@ -204,10 +209,16 @@ body {
   z-index: 3; }
   .nav__links {
     display: flex;
-    padding: 3rem 10rem 0 0;
+    margin: 3rem 10rem 0 0;
     list-style: none; }
+    @media only screen and (max-width: 62.5em) {
+      .nav__links {
+        margin-right: 6rem; } }
     .nav__links li:not(:last-child) {
       margin-right: 5rem; }
+      @media only screen and (max-width: 62.5em) {
+        .nav__links li:not(:last-child) {
+          margin-right: 3rem; } }
     .nav__links li a {
       text-decoration: none;
       color: #ffffff;
@@ -257,17 +268,49 @@ body {
     opacity: .8;
     -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%); }
-  .header__text-container {
-    grid-column: 2 / -1;
-    grid-row: 1 / 2;
-    z-index: 2;
-    position: relative;
+    @media only screen and (max-width: 62.5em) {
+      .header__background {
+        -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 70% 100%);
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 60% 100%); } }
+    @media only screen and (max-width: 50em) {
+      .header__background {
+        -webkit-clip-path: none;
+        clip-path: none;
+        background-color: transparent; } }
+  .header__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 50em) {
+      .header__container {
+        background-color: #212021;
+        padding: 5rem;
+        border-radius: 2rem;
+        opacity: .8; } }
+  .header__text-container {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 62.5em) {
+      .header__text-container {
+        margin-right: 2rem; } }
+    @media only screen and (max-width: 50em) {
+      .header__text-container {
+        grid-column: 1 / -1;
+        margin-right: 0; } }
     .header__text-container--p {
+      text-align: center;
       max-width: 50rem; }
+    .header__text-container--buttons {
+      display: flex; }
+      @media only screen and (max-width: 37.5em) {
+        .header__text-container--buttons {
+          flex-direction: column; } }
 
 .about-me {
   position: relative;
