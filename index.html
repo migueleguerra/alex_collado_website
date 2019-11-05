@@ -43,6 +43,7 @@
     </header>
 
     <section id="section-about-me" class="about-me">
+      <img class="about-me__plate" src="assets/img/plate1.png" alt="">
       <div class="about-me__background"></div>
         <div class="about-me__text-container">
           <div class="about-me__text-container--title u-margin-bottom-small">
@@ -72,7 +73,7 @@
     </section>
 
     <section id="section-service" class="services">
-      <!--<img src="assets/img/plate1.png" alt="">-->
+      <img class="services__plate" src="assets/img/plate2.png" alt="">
       <div class="services__title">
         <img src="assets/img/title_line.png" alt="about me line">
         <h2 class="heading--2 u-margin-bottom-small">Services</h2>
@@ -192,14 +193,14 @@
       <div class="footer__container">
         <div class="footer__contact">
           <div class="footer__contact--phone">
-              <svg class="footer__contact--icon">
-                <use xlink:href="assets/icons/phone-form.svg"/>
-              </svg>
+            <svg class="footer__contact--icon">
+              <use xlink:href="assets/icons/sprite.svg#icon-phone"></use>
+            </svg>
             <a class="footer__contact--a paragraph-1" href="tel:5531097762">5531097762</a>
           </div>
           <div class="footer__contact--email">
               <svg class="footer__contact--icon">
-                <use xlink:href="assets/icons/envelope.svg"/>
+                <use xlink:href="assets/icons/sprite.svg#icon-envelope"></use>
               </svg>
             <a class="footer__contact--a paragraph-1"
               href="mailto:chefalexco@gmail.com">chefalexco@gmail.com</a>
@@ -210,20 +211,24 @@
         </div>
         <div class="footer__social">
           <a href="#">
-            <object class="footer__social--icon" data="assets/icons/instagram.svg" 
-              type="image/svg+xml"></object>
-          </a> 
-          <a href="#">
-            <object class="footer__social--icon" data="assets/icons/medium.svg" 
-              type="image/svg+xml"></object>
+            <svg class="footer__social--icon">
+              <use xlink:href="assets/icons/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
           <a href="#">
-            <object class="footer__social--icon" data="assets/icons/twitter-square.svg" 
-              type="image/svg+xml"></object>
+            <svg class="footer__social--icon--medium">
+              <use xlink:href="assets/icons/sprite.svg#icon-medium"></use>
+            </svg>
           </a>
           <a href="#">
-            <object class="footer__social--icon" data="assets/icons/whatsapp.svg" 
-              type="image/svg+xml"></object>
+            <svg class="footer__social--icon">
+              <use xlink:href="assets/icons/sprite.svg#icon-twitter-square"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="footer__social--icon">
+              <use xlink:href="assets/icons/sprite.svg#icon-whatsapp"></use>
+            </svg>
           </a>
         </div>
       </div>
@@ -330,7 +335,7 @@
           <a href="#section-form" class="btn btn--primary">hire me</a>
         </div>
         <div class="popup__right">
-          <img class="popup__img--about-me" src="../assets/img/about-me.jpg" 
+          <img class="popup__img--about-me" src="../assets/img/about-me.jpg"
             alt="Chef Privado Playa del Carmen">
         </div>
       </div>
