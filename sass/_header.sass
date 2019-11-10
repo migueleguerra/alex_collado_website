@@ -18,7 +18,7 @@
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%)
 
     @media only screen and (max-width: $bp-large)
-      -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 70% 100%)
+      -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 60% 100%)
       clip-path: polygon(30% 0, 100% 0, 100% 100%, 60% 100%)
 
     @media only screen and (max-width: $bp-medium)
@@ -58,8 +58,8 @@
       text-align: center
       max-width: 50rem
 
+      @media only screen and (max-width: $bp-small)
+        max-width: 40rem
+
     &--buttons
       display: flex
-
-      @media only screen and (max-width: $bp-small)
-        flex-direction: column

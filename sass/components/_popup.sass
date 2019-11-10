@@ -24,11 +24,19 @@
     padding: 5rem
     background-color: $color-white
 
+    @media only screen and (max-width: $bp-medium)
+      flex-direction: column
+
   &__left
     display: flex
     flex-direction: column
     align-items: center
     margin-right: 5rem
+
+    @media only screen and (max-width: $bp-medium)
+      margin-top: 2rem
+      margin-right: 0
+      order: 1
 
   &__right
     display: flex
@@ -49,6 +57,10 @@
         background-position: center
         box-shadow: $shadow
 
+        @media only screen and (max-width: $bp-medium)
+          height: 15rem
+          width: 15rem
+
   &__text
     max-width: 40rem
 
@@ -67,6 +79,10 @@
   &__img--about-me
     height: 50rem
     opacity: 0.8 
+
+    @media only screen and (max-width: $bp-medium)
+      visibility: hidden
+      height: 0
 
   &:target
     opacity: 1

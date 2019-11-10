@@ -5,12 +5,18 @@
   grid-gap: 2rem
   padding: 5rem
 
+  @media only screen and (max-width: $bp-small)
+    padding: 0
+
   & > *
     height: 30rem
     border-radius: $border-radius
     background-size: cover
     background-position: center
     box-shadow: $shadow
+
+    @media only screen and (max-width: $bp-small)
+      height: 20rem
 
   &--1
     background-image: url(../assets/img/gallery1.jpg)

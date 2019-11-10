@@ -5,10 +5,16 @@
   grid-template-columns: repeat(2, 1fr)
   height: 100vh
 
+  @media only screen and (max-width: $bp-medium)
+    height: 120vh
+
   &__plate
-    height: 28rem
+    height: 22rem
     bottom: -15rem
     position: absolute
+
+    @media only screen and (max-width: $bp-medium)
+      visibility: hidden
 
   &__background
     height: 100vh
@@ -18,6 +24,15 @@
     -webkit-clip-path: polygon(70% 0, 100% 0, 100% 100%, 40% 100%)
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 40% 100%)
 
+    @media only screen and (max-width: $bp-large)
+      -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
+      clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
+
+    @media only screen and (max-width: $bp-medium)
+      -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
+      clip-path: polygon(100% 50%, 100% 0, 100% 100%, 0 100%)
+      height: 120vh
+      
   &__text-container
     grid-column: 1 / 2
     grid-row: 1 / 2
@@ -25,6 +40,11 @@
     flex-direction: column
     justify-content: center
     align-items: center
+
+    @media only screen and (max-width: $bp-medium)
+      grid-column: 1 / -1
+      justify-content: flex-start
+      margin-top: 10rem
 
     &--title
       text-align: center
@@ -42,6 +62,9 @@
     display: flex
     align-items: flex-end
     justify-content: center
+
+    @media only screen and (max-width: $bp-medium)
+      grid-column: 1 / -1
 
     img
       position: relative

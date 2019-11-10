@@ -3,16 +3,26 @@
   height: 25vh
   background-color: $color-primary
 
+  @media only screen and (max-width: $bp-small)
+    height: 35vh
+
   &__container
     display: grid
     grid-template-columns: repeat(6, 1fr)
 
+    @media only screen and (max-width: $bp-small)
+      display: flex
+      flex-direction: column
+      align-items: center
+
   &__contact
     grid-column: 2 / 3
-    height: 25vh
     display: flex
     flex-direction: column
-    padding-top: 4rem
+    margin-top: 4rem
+
+    @media only screen and (max-width: $bp-small)
+      margin-bottom: 4rem
 
     &--phone
       display: flex
@@ -41,16 +51,26 @@
 
   &__copyright
     color: $color-white
+    height: 25vh
     grid-column: 3 / 5
     display: flex
     align-items: flex-end
     justify-self: center
+    text-align: center
     padding-bottom: 2rem
+
+    @media only screen and (max-width: $bp-small)
+      align-items: center
+      height: 0
+      margin-bottom: 4rem
 
   &__social
     fill: $color-white
-    grid-column: 5 / 6
+    grid-column: 5 / -1
     padding-top: 5rem
+
+    @media only screen and (max-width: $bp-small)
+      padding-top: 0
 
     a
       text-decoration: none
