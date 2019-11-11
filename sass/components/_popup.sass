@@ -23,6 +23,9 @@
     display: flex
     padding: 5rem
     background-color: $color-white
+    opacity: 0
+    transform: scale(.5)
+    transition: all .4s .2s
 
     @media only screen and (max-width: $bp-medium)
       flex-direction: column
@@ -88,9 +91,9 @@
     opacity: 1
     visibility: visible
 
-  &:target &__content
+  &:target &__container
     opacity: 1
-    transform: translate(-50%, -50%) scale(1)
+    transform: scale(1)
 
   &__close
     &:link,

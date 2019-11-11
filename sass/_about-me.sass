@@ -1,12 +1,14 @@
 .about-me
   position: relative
   grid-column: full-start / full-end
+  grid-row: 2 / 3
   display: grid
   grid-template-columns: repeat(2, 1fr)
   height: 100vh
 
   @media only screen and (max-width: $bp-medium)
-    height: 120vh
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(2, 1fr)
 
   &__plate
     height: 22rem
@@ -14,7 +16,7 @@
     position: absolute
 
     @media only screen and (max-width: $bp-medium)
-      visibility: hidden
+      display: none
 
   &__background
     height: 100vh
@@ -31,7 +33,8 @@
     @media only screen and (max-width: $bp-medium)
       -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%)
       clip-path: polygon(100% 50%, 100% 0, 100% 100%, 0 100%)
-      height: 120vh
+      grid-column: 1 / 2
+      grid-row: 1 / -1
       
   &__text-container
     grid-column: 1 / 2
@@ -42,9 +45,9 @@
     align-items: center
 
     @media only screen and (max-width: $bp-medium)
-      grid-column: 1 / -1
-      justify-content: flex-start
-      margin-top: 10rem
+      margin-top: 5rem
+      grid-column: 1 / 2
+      grid-row: 1 / 2
 
     &--title
       text-align: center
@@ -64,9 +67,14 @@
     justify-content: center
 
     @media only screen and (max-width: $bp-medium)
-      grid-column: 1 / -1
+      grid-column: 1 / 2
+      grid-row: 2 / -1
 
     img
       position: relative
       height: 60rem
+
+      @media only screen and (max-width: $bp-medium)
+        visibility: hidden
+        height: 0
 

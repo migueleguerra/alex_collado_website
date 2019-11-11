@@ -1,14 +1,14 @@
 .services
   grid-column: full-start / full-end
   position: relative
-  height: 100vh
+  padding: 10rem
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
 
   @media only screen and (max-width: $bp-medium)
-      height: 180vh
+    padding: 8rem
 
   &__plate
     position: absolute
@@ -17,7 +17,7 @@
     bottom: 0
 
     @media only screen and (max-width: $bp-medium)
-      visibility: hidden
+      display: none
 
   &__title
     display: flex
@@ -29,21 +29,25 @@
       height: 0.4rem
 
     p
-      max-width: 80rem
+      max-width: 70rem
 
       @media only screen and (max-width: $bp-medium)
-        max-width: 40rem
+        max-width: 50rem
 
   &__cards
     display: grid
+    margin: 0 auto
+    width: 80%
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
-    grid-gap: 8rem
+    grid-gap: 5rem
 
     @media only screen and (max-width: $bp-medium)
       display: flex
       flex-direction: column
       align-items: center
-      width: 80%
+    
+    @media only screen and (max-width: $bp-small)
+      width: 90%
 
     &--container
       position: relative
@@ -56,9 +60,9 @@
       color: inherit
       display: grid
       grid-template-rows: repeat(2, 1fr)
+      max-width: 32rem
 
-      @media only screen and (max-width: $bp-medium)
-        max-width: 32rem
+      @media only screen and (max-width: $bp-large)
         margin-bottom: 5rem
 
       &__background

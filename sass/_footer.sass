@@ -23,6 +23,7 @@
 
     @media only screen and (max-width: $bp-small)
       margin-bottom: 4rem
+      order: 0
 
     &--phone
       display: flex
@@ -62,7 +63,7 @@
     @media only screen and (max-width: $bp-small)
       align-items: center
       height: 0
-      margin-bottom: 4rem
+      order: 2
 
   &__social
     fill: $color-white
@@ -71,6 +72,8 @@
 
     @media only screen and (max-width: $bp-small)
       padding-top: 0
+      margin-bottom: 4rem
+      order: 1
 
     a
       text-decoration: none
@@ -86,8 +89,8 @@
       &--medium
         position: relative
         fill: $color-white
-        height: 2.7rem
-        width: 2.7rem
+        height: 2.6rem
+        width: 2.6rem
         bottom: 2px
         transition: all .2s
 
