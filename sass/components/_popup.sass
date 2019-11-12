@@ -29,6 +29,7 @@
 
     @media only screen and (max-width: $bp-medium)
       flex-direction: column
+      width: 90%
 
   &__left
     display: flex
@@ -61,11 +62,19 @@
         box-shadow: $shadow
 
         @media only screen and (max-width: $bp-medium)
-          height: 15rem
-          width: 15rem
+          display: none
+
+  &__heading
+    text-align: center
+
+    @media only screen and (max-width: $bp-medium)
+      margin-bottom: 2rem !important
 
   &__text
     max-width: 40rem
+
+    @media only screen and (max-width: $bp-medium)
+      margin-bottom: 2rem !important
 
   &__img--1
     background-image: url(../../assets/img/gallery1-x2.jpg)

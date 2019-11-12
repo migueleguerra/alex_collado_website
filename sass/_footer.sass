@@ -3,14 +3,14 @@
   height: 25vh
   background-color: $color-primary
 
-  @media only screen and (max-width: $bp-small)
-    height: 30vh
+  @media only screen and (max-width: $bp-medium)
+    height: auto
 
   &__container
     display: grid
     grid-template-columns: repeat(6, 1fr)
 
-    @media only screen and (max-width: $bp-small)
+    @media only screen and (max-width: $bp-medium)
       display: flex
       flex-direction: column
       align-items: center
@@ -21,7 +21,7 @@
     flex-direction: column
     margin-top: 4rem
 
-    @media only screen and (max-width: $bp-small)
+    @media only screen and (max-width: $bp-medium)
       margin-bottom: 4rem
       order: 0
 
@@ -60,9 +60,9 @@
     text-align: center
     padding-bottom: 2rem
 
-    @media only screen and (max-width: $bp-small)
+    @media only screen and (max-width: $bp-medium)
       align-items: center
-      height: 0
+      height: auto
       order: 2
 
   &__social
@@ -70,7 +70,7 @@
     grid-column: 5 / -1
     padding-top: 5rem
 
-    @media only screen and (max-width: $bp-small)
+    @media only screen and (max-width: $bp-medium)
       padding-top: 0
       margin-bottom: 4rem
       order: 1
