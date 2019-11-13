@@ -54,6 +54,7 @@ body {
     color: #212021; }
 
 .btn, .btn:link, .btn:visited {
+  -webkit-appearance: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.8rem 4rem;
@@ -124,17 +125,16 @@ body {
     transform: scale(1.05); }
 
 .popup {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;
+  display: none;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
   opacity: 0;
-  visibility: hidden;
-  transition: all .3s; }
+  visibility: hidden; }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       -webkit-backdrop-filter: blur(10px);
@@ -143,13 +143,11 @@ body {
   .popup__container {
     position: relative;
     border-radius: 2rem;
-    display: flex;
+    display: none;
     padding: 5rem;
     background-color: #ffffff;
-    opacity: 0;
-    transform: scale(0.5);
-    transition: all .4s .2s; }
-    @media only screen and (max-width: 50em) {
+    opacity: 0; }
+    @media only screen and (max-width: 37.5em) {
       .popup__container {
         flex-direction: column;
         width: 90%; } }
@@ -209,9 +207,11 @@ body {
         height: 0; } }
   .popup:target {
     opacity: 1;
+    display: flex;
     visibility: visible; }
   .popup:target .popup__container {
     opacity: 1;
+    display: flex;
     transform: scale(1); }
   .popup__close:link, .popup__close:visited {
     color: #212021;
@@ -793,6 +793,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh; }
+  .contact__error-msg {
+    color: red;
+    font-size: 1.3rem; }
 
 .contact-form {
   display: flex;
@@ -822,4 +825,31 @@ body {
 textarea {
   font-family: inherit;
   font-size: 1.5rem;
-  height: 15rem; }
+  height: 10rem; }
+
+.loading {
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 8000; }
+  .loading__img {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 0.6rem solid #ffffff;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border-top-color: #F0C824;
+    animation: spin .8s infinite ease-in-out; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
