@@ -381,8 +381,9 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
-  background-image: url(../assets/img/header-background3-x2.jpg);
-  background-size: cover; }
+  background-image: url(../assets/img/header-background-x2.png);
+  background-size: cover;
+  background-position: bottom; }
   .header__background {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -853,3 +854,19 @@ textarea {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center; }
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center; }
+  .error-container__img {
+    height: 15rem; }
