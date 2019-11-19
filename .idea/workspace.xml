@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca4863f9-7bcf-49c4-b2a2-cf90ef35c4c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/_error.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/_success.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service-flow.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/form-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/form-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/_services.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sass/_services.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/components/_popup.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_popup.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +26,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>id</find>
-    </findStrings>
   </component>
   <component name="G3PluginsProjectSettings">
     <appliedSettings>
@@ -94,7 +86,8 @@
       <workItem from="1572281625825" duration="61650000" />
       <workItem from="1572891934190" duration="26622000" />
       <workItem from="1573583553531" duration="11798000" />
-      <workItem from="1573682335190" duration="3693000" />
+      <workItem from="1573682335190" duration="4450000" />
+      <workItem from="1574187937544" duration="3268000" />
     </task>
     <servers />
   </component>

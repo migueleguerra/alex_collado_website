@@ -21,7 +21,6 @@ function sendData() {
       contentType: false,
       processData: false
     }).done(function() {
-      alert('Your mail is sent!');
       const url = window.location.protocol + "//" +
           window.location.host + "/templates/success.html";
       window.location.href = url;
