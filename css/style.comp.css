@@ -227,7 +227,7 @@ body {
     color: #F0C824; }
 
 .nav {
-  grid-column: center-start / center-end;
+  grid-column: 7 / center-end;
   font-size: 2rem;
   grid-row: 1 / 2;
   display: flex;
