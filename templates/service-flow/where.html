@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon-chef.png">
 
@@ -22,10 +24,12 @@
       <h3 class="heading--2 u-margin-bottom-big">Where do you need your service?</h3>
     </div>
     <div class="buttons">
-      <button id="playa_del_carmen" class="btn btn--primary u-margin-bottom-small">Playa del Carmen</button>
-      <button id="puerto_morelos" class="btn btn--primary u-margin-bottom-small">Puerto Morelos</button>
-      <button id="tulum" class="btn btn--primary u-margin-bottom-small">Tulum</button>
-      <button id="somewhere_else" class="btn btn--primary u-margin-bottom-small">Somewhere else</button>
+      <button class="btn btn--primary u-margin-bottom-small" onclick="where(this)">Playa del Carmen</button>
+      <button class="btn btn--primary u-margin-bottom-small" onclick="where(this)">Puerto Morelos</button>
+      <button class="btn btn--primary u-margin-bottom-small" onclick="where(this)">Tulum</button>
+      <button class="btn btn--primary u-margin-bottom-small" onclick="where(this)">Somewhere else</button>
     </div>
+
+    <script type="text/javascript" src="../../js/service-flow.js"></script>
   </body>
 </html>
