@@ -80,3 +80,29 @@
       outline: none
       color: $color-tertiary
       transform: $button-scale
+
+.btn-box
+  &,
+  &:link,
+  &:visited
+    text-transform: uppercase
+    font-family: $font-secondary
+    font-size: $button-text-size
+    padding: 2rem
+    min-width: 25rem
+    cursor: pointer
+    border: $border-primary
+    border-radius: $border-radius
+    box-shadow: $shadow
+    background-color: $color-secondary
+    transition: all .2s
+
+    @media only screen and (max-width: $bp-medium)
+      min-width: 22rem
+
+    &:hover
+      transform: $button-scale
+
+    &:focus
+      outline: none
+      transform: $button-scale

@@ -124,6 +124,27 @@ body {
     color: #F0C824;
     transform: scale(1.05); }
 
+.btn-box, .btn-box:link, .btn-box:visited {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  padding: 2rem;
+  min-width: 25rem;
+  cursor: pointer;
+  border: 1px solid rgba(252, 222, 97, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  background-color: #FCDE61;
+  transition: all .2s; }
+  @media only screen and (max-width: 50em) {
+    .btn-box, .btn-box:link, .btn-box:visited {
+      min-width: 22rem; } }
+  .btn-box:hover, .btn-box:link:hover, .btn-box:visited:hover {
+    transform: scale(1.05); }
+  .btn-box:focus, .btn-box:link:focus, .btn-box:visited:focus {
+    outline: none;
+    transform: scale(1.05); }
+
 .popup {
   align-items: center;
   justify-content: center;
@@ -888,3 +909,62 @@ textarea {
   justify-content: center; }
   .error-container__img {
     height: 15rem; }
+
+.service-flow {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.timeline {
+  display: flex;
+  justify-items: center;
+  position: absolute;
+  width: 100%;
+  left: 5rem;
+  top: 5rem; }
+  .timeline > * svg {
+    width: 5rem;
+    height: 5rem; }
+  .timeline__line {
+    position: relative;
+    top: 2.5rem;
+    margin-left: 2rem;
+    width: 5rem;
+    height: 5rem; }
+
+.timeline a:not(:first-child) {
+  margin-left: 2rem; }
+
+.title {
+  text-align: center; }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .buttons button {
+    min-width: 25rem; }
+
+.buttons-box {
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .buttons-box {
+      flex-direction: column; } }
+
+.buttons-box > *:nth-child(2) {
+  margin: 0 4rem; }
+  @media only screen and (max-width: 50em) {
+    .buttons-box > *:nth-child(2) {
+      margin: 0 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .buttons-box > *:nth-child(2) {
+      margin: 0; } }
+
+.box-icon {
+  fill: #212021;
+  width: 10rem;
+  height: 10rem; }

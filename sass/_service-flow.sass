@@ -1,0 +1,61 @@
+.service-flow
+  display: flex
+  height: 100vh
+  position: relative
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.timeline
+  display: flex
+  justify-items: center
+  position: absolute
+  width: 100%
+  left: 5rem
+  top: 5rem
+
+  & > * svg
+    width: 5rem
+    height: 5rem
+  
+  &__line
+    position: relative
+    top: 2.5rem
+    margin-left: 2rem
+    width: 5rem
+    height: 5rem
+
+.timeline a:not(:first-child)
+  margin-left: 2rem
+
+.title
+  text-align: center
+  
+.buttons
+  display: flex
+  flex-direction: column
+  align-items: center
+  
+  button 
+    min-width: 25rem
+
+.buttons-box
+  display: flex
+  justify-content: center
+
+  @media only screen and (max-width: $bp-small)
+    flex-direction: column
+
+.buttons-box > *:nth-child(2)
+  margin: 0 4rem
+
+  @media only screen and (max-width: $bp-medium)
+    margin: 0 2rem
+
+  @media only screen and (max-width: $bp-small)
+    margin: 0
+
+.box-icon
+  fill: $color-primary
+  width: 10rem
+  height: 10rem
