@@ -32,16 +32,16 @@ function sendData() {
       window.location.href = url;
       history.pushState(null, null, url);
     });
-  }
-
-  let spanElement = document.createElement('span');
-  let text = document.createTextNode(
-    'Make sure you fill all input fields.'
+  } else {
+    let spanElement = document.createElement('span');
+    let text = document.createTextNode(
+        'Make sure you fill all input fields.'
     );
-  spanElement.appendChild(text);
-  document.getElementById('error-msg').appendChild(spanElement);
+    spanElement.appendChild(text);
+    document.getElementById('error-msg').appendChild(spanElement);
 
-  setTimeout(function() {
-    document.getElementById('error-msg').removeChild(spanElement);
-  }, 5000);
+    setTimeout(function() {
+      document.getElementById('error-msg').removeChild(spanElement);
+    }, 5000);
+  }
 }

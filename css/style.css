@@ -145,6 +145,24 @@ body {
     outline: none;
     transform: scale(1.05); }
 
+.btn-count, .btn-count:link, .btn-count:visited {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid rgba(252, 222, 97, 0.8);
+  border-radius: 5px;
+  margin: 0.2rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  background-color: #FCDE61;
+  transition: all .2s; }
+  .btn-count:hover, .btn-count:link:hover, .btn-count:visited:hover {
+    transform: scale(1.05); }
+  .btn-count:focus, .btn-count:link:focus, .btn-count:visited:focus {
+    outline: none;
+    transform: scale(1.05); }
+
 .popup {
   align-items: center;
   justify-content: center;
@@ -926,13 +944,14 @@ textarea {
   left: 5rem;
   top: 5rem; }
   .timeline > * svg {
-    width: 5rem;
-    height: 5rem; }
+    fill: #9E9E9E;
+    width: 3rem;
+    height: 3rem; }
   .timeline__line {
     position: relative;
-    top: 2.5rem;
+    top: 0.6rem;
     margin-left: 2rem;
-    width: 5rem;
+    width: 3rem;
     height: 5rem; }
 
 .timeline a:not(:first-child) {
@@ -954,17 +973,48 @@ textarea {
   @media only screen and (max-width: 37.5em) {
     .buttons-box {
       flex-direction: column; } }
-
-.buttons-box > *:nth-child(2) {
-  margin: 0 4rem; }
-  @media only screen and (max-width: 50em) {
-    .buttons-box > *:nth-child(2) {
-      margin: 0 2rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .buttons-box > *:nth-child(2) {
-      margin: 0; } }
+  .buttons-box > * {
+    margin: 0 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .buttons-box > * {
+        margin: 0; } }
 
 .box-icon {
   fill: #212021;
   width: 10rem;
   height: 10rem; }
+
+.content-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif; }
+  .content-buttons__group {
+    display: flex;
+    align-items: center; }
+  .content-buttons__input {
+    border: 0;
+    margin: 0 3rem 0 4rem;
+    width: 3rem;
+    font-size: 2.5rem; }
+  .content-buttons__label {
+    text-transform: uppercase; }
+
+.content-date {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  display: flex; }
+  .content-date__group {
+    margin: 0 2rem; }
+  .content-date__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 14rem;
+    padding: 1rem;
+    text-align: center; }
+  .content-date__label {
+    text-transform: uppercase;
+    margin-right: 0.5rem; }

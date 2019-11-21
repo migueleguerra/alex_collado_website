@@ -15,14 +15,15 @@
   top: 5rem
 
   & > * svg
-    width: 5rem
-    height: 5rem
-  
+    fill: #9E9E9E
+    width: 3rem
+    height: 3rem
+
   &__line
     position: relative
-    top: 2.5rem
+    top: 0.6rem
     margin-left: 2rem
-    width: 5rem
+    width: 3rem
     height: 5rem
 
 .timeline a:not(:first-child)
@@ -30,13 +31,13 @@
 
 .title
   text-align: center
-  
+
 .buttons
   display: flex
   flex-direction: column
   align-items: center
-  
-  button 
+
+  button
     min-width: 25rem
 
 .buttons-box
@@ -46,16 +47,55 @@
   @media only screen and (max-width: $bp-small)
     flex-direction: column
 
-.buttons-box > *:nth-child(2)
-  margin: 0 4rem
-
-  @media only screen and (max-width: $bp-medium)
+  & > *
     margin: 0 2rem
 
-  @media only screen and (max-width: $bp-small)
-    margin: 0
+    @media only screen and (max-width: $bp-small)
+      margin: 0
 
 .box-icon
   fill: $color-primary
   width: 10rem
   height: 10rem
+
+.content-buttons
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  font-size: $text-size
+  font-family: $font-secondary
+
+  &__group
+    display: flex
+    align-items: center
+
+  &__input
+    border: 0
+    margin: 0 3rem 0 4rem
+    width: 3rem
+    font-size: 2.5rem
+
+  &__label
+    text-transform: uppercase
+
+.content-date
+  font-size: $text-size
+  font-family: $font-secondary
+  display: flex
+
+  &__group
+    margin: 0 2rem
+
+  &__input
+    font-family: inherit
+    font-size: inherit
+    border: $border-form
+    border-radius: 10px
+    width: 14rem
+    padding: 1rem
+    text-align: center
+
+  &__label
+    text-transform: uppercase
+    margin-right: 0.5rem
+
