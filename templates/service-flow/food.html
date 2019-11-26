@@ -12,86 +12,88 @@
   </head>
   <body class="service-flow">
     <div class="timeline">
-      <a href="#">
-        <svg>
-          <use xlink:href="../../assets/icons/sprite.svg#icon-placeholder"></use>
-        </svg>
-      </a>
+      <svg class="timeline__icon">
+        <use xlink:href="../../assets/icons/sprite.svg#icon-placeholder"></use>
+      </svg>
       <svg class="timeline__line" >
         <use xlink:href="../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <a href="#">
-        <svg>
-          <use xlink:href="../../assets/icons/sprite.svg#icon-service"></use>
-        </svg>
-      </a>
+      <svg class="timeline__icon">
+        <use xlink:href="../../assets/icons/sprite.svg#icon-service"></use>
+      </svg>
       <svg class="timeline__line" >
         <use xlink:href="../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <a href="#">
-        <svg>
-          <use xlink:href="../../assets/icons/sprite.svg#icon-user"></use>
-        </svg>
-      </a>
+      <svg class="timeline__icon">
+        <use xlink:href="../../assets/icons/sprite.svg#icon-user"></use>
+      </svg>
       <svg class="timeline__line" >
         <use xlink:href="../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <a href="#">
-        <svg>
-          <use xlink:href="../../assets/icons/sprite.svg#icon-cutlery"></use>
-        </svg>
-      </a>
+      <svg class="timeline__icon">
+        <use xlink:href="../../assets/icons/sprite.svg#icon-cutlery"></use>
+      </svg>
       <svg class="timeline__line" >
         <use xlink:href="../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <a href="#">
-        <svg style="fill: #F0C824">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-cooking"></use>
-        </svg>
-      </a>
+      <svg class="timeline__icon" style="fill: #F0C824">
+        <use xlink:href="../../assets/icons/sprite.svg#icon-cooking"></use>
+      </svg>
     </div>
 
     <div class="title">
       <h3 class="heading--2 u-margin-bottom-big">What would you like me to cook?</h3>
     </div>
 
-    <div class="buttons-box">
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-food"></use>
-        </svg>
-        <p>Mexican</p>
-      </button>
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-multiple-food"></use>
-        </svg>
-        <p>American</p>
-      </button>
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-multiple-food"></use>
-        </svg>
-        <p>Fusion</p>
-      </button>
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-multiple-food"></use>
-        </svg>
-        <p>Sea Lovers</p>
-      </button>
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-multiple-food"></use>
-        </svg>
-        <p>Carnivore</p>
-      </button>
-      <button class="btn-box u-margin-bottom-small">
-        <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../assets/icons/sprite.svg#icon-multiple-food"></use>
-        </svg>
-        <p>I dont know</p>
-      </button>
+    <div class="buttons-box-block">
+      <div class="buttons-box-block__group">
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-mexican"></use>
+          </svg>
+          <p>Mexican</p>
+        </button>
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-american"></use>
+          </svg>
+          <p>American</p>
+        </button>
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-fusion"></use>
+          </svg>
+          <p>Fusion</p>
+        </button>
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-sea"></use>
+          </svg>
+          <p>Sea Lovers</p>
+        </button>
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-steak"></use>
+          </svg>
+          <p>Carnivore</p>
+        </button>
+        <button class="btn-box u-margin-bottom-small">
+          <svg class="box-icon u-margin-bottom-small">
+            <use xlink:href="../../assets/icons/sprite.svg#icon-cooking"></use>
+          </svg>
+          <p>Your choice</p>
+        </button>
+      </div>
+      <div class="buttons-box-block__group u-margin-bottom-medium">
+        <textarea name="message" id="message"
+                  class="contact-form__input" placeholder="Other requests?"></textarea>
+      </div>
+      <div class="buttons-box-block__group">
+        <button class="btn btn--primary u-margin-bottom-small"
+                onclick="nextUrl(this, 'stove.html')">
+          Continue
+        </button>
+      </div>
     </div>
 
     <script type="text/javascript" src="../../js/service-flow.js"></script>

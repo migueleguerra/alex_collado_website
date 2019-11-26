@@ -1,36 +1,53 @@
 .service-flow
   display: flex
   height: 100vh
-  position: relative
   justify-content: center
   align-items: center
   flex-direction: column
 
+  @media only screen and (max-width: $bp-small)
+    height: 100%
+    padding: 5rem 0
+
 .timeline
   display: flex
-  justify-items: center
-  position: absolute
-  width: 100%
-  left: 5rem
-  top: 5rem
+  justify-content: center
+  margin-bottom: 15rem
 
-  & > * svg
+  @media only screen and (max-width: $bp-small)
+    margin-bottom: 8rem
+
+  &__icon
     fill: #9E9E9E
     width: 3rem
     height: 3rem
 
+    @media only screen and (max-width: $bp-small)
+      margin: 0 1rem
+      width: 2rem
+      height: 2rem
+
   &__line
-    position: relative
-    top: 0.6rem
-    margin-left: 2rem
-    width: 3rem
-    height: 5rem
+    display: flex
+    align-self: flex-end
+    margin: 0 2rem
+    width: 2rem
+    height: 1.5rem
+
+    @media only screen and (max-width: $bp-medium)
+      margin: 0 1rem
+
+    @media only screen and (max-width: $bp-small)
+      display: none
 
 .timeline a:not(:first-child)
   margin-left: 2rem
 
 .title
   text-align: center
+
+  @media only screen and (max-width: $bp-small)
+    width: 90%
 
 .buttons
   display: flex
@@ -83,14 +100,21 @@
   font-family: $font-primary
   display: flex
 
+  @media only screen and (max-width: $bp-small)
+    flex-direction: column
+    align-items: flex-end
+
   &__group
     margin: 0 2rem
+
+    @media only screen and (max-width: $bp-small)
+      margin: 1rem 0
 
   &__input
     font-family: inherit
     font-size: inherit
     border: $border-form
-    border-radius: 10px
+    border-radius: 5px
     width: 14rem
     padding: 1rem
     text-align: center
@@ -106,10 +130,10 @@
 
   & > *
     margin-bottom: 2rem
-    
+
   &__group > *
     margin: 0 1rem
-    
+
   &__group
     @media only screen and (max-width: $bp-medium)
       width: 95%
