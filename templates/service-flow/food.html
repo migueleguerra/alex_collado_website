@@ -47,37 +47,43 @@
 
     <div class="buttons-box-block">
       <div class="buttons-box-block__group">
-        <button class="btn-box u-margin-bottom-small">
+        <button id="mexican-food" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-mexican"></use>
           </svg>
           <p>Mexican</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="american-food" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-american"></use>
           </svg>
           <p>American</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="fusion-food" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-fusion"></use>
           </svg>
           <p>Fusion</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="sea-lovers-food" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-sea"></use>
           </svg>
           <p>Sea Lovers</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="carnivore-food" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-steak"></use>
           </svg>
           <p>Carnivore</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="your-choice" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-small">
             <use xlink:href="../../assets/icons/sprite.svg#icon-cooking"></use>
           </svg>
@@ -85,12 +91,12 @@
         </button>
       </div>
       <div class="buttons-box-block__group u-margin-bottom-medium">
-        <textarea name="message" id="message"
+        <textarea name="message" id="message-food"
                   class="contact-form__input" placeholder="Other requests?"></textarea>
       </div>
       <div class="buttons-box-block__group">
         <button class="btn btn--primary u-margin-bottom-small"
-                onclick="nextUrl(this, 'stove.html')">
+                onclick="nextUrlMultipleOption('food', 'stove')">
           Continue
         </button>
       </div>

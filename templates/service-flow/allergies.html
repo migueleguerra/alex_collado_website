@@ -67,31 +67,36 @@
 
     <div class="buttons-box-block">
       <div class="buttons-box-block__group">
-        <button class="btn-box u-margin-bottom-small">
+        <button id="vegan" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-tiny">
             <use xlink:href="../../assets/icons/sprite.svg#icon-vegetables"></use>
           </svg>
           <p>Vegan</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="gluten-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-tiny">
             <use xlink:href="../../assets/icons/sprite.svg#icon-gluten-free"></use>
           </svg>
           <p>Gluten Free</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="sea-food-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-tiny">
             <use xlink:href="../../assets/icons/sprite.svg#icon-sea-food-free"></use>
           </svg>
           <p>Sea Food Free</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="nut free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-tiny">
             <use xlink:href="../../assets/icons/sprite.svg#icon-nut-free"></use>
           </svg>
           <p>Nut Free</p>
         </button>
-        <button class="btn-box u-margin-bottom-small">
+        <button id="dairy-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
           <svg class="box-icon u-margin-bottom-tiny">
             <use xlink:href="../../assets/icons/sprite.svg#icon-dairy-free"></use>
           </svg>
@@ -99,12 +104,12 @@
         </button>
       </div>
       <div class="buttons-box-block__group u-margin-bottom-medium">
-        <textarea name="message" id="message"
+        <textarea name="message" id="message-allergies"
                   class="contact-form__input" placeholder="Some other requests?"></textarea>
       </div>
       <div class="buttons-box-block__group">
           <button class="btn btn--primary u-margin-bottom-small"
-          onclick="nextUrl(this, 'allergies.html')">
+                  onclick="nextUrlMultipleOption('allergies', 'contact')">
             Continue
           </button>
       </div>
