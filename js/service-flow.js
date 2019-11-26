@@ -42,6 +42,7 @@ function setMultipleData(thisUrlName, serviceInfo, type) {
         'message-food':
         document.getElementById('message-food').value,
       };
+      document.getElementById('message-food').value = '';
       selectedItems = [];
       break;
 
@@ -63,7 +64,12 @@ function setMultipleData(thisUrlName, serviceInfo, type) {
         'selected-allergies': selectedItems,
         'message-allergies':
         document.getElementById('message-allergies').value
-      }
+      };
+      document.getElementById('message-allergies').value = '';
+      break;
+
+    default:
+      break;
   }
   return serviceInfo;
 }
@@ -109,13 +115,13 @@ function onClickFood(button) {
 
 function sendDataServiceFlow() {
   let formData = new FormData(document.querySelector('form'));
-  formData = getAndRemoveLocalStorageKey(formData);
-
   if (formData.get('name') === '' || formData.get('email') === '' ||
       grecaptcha.getResponse().length === 0) {
     printErrorMessage();
     return;
   }
+
+  formData = getAndRemoveLocalStorageKey(formData);
   $(".loading").css("visibility", "visible");
   formData = setEmailAttributes(formData);
   emptyInputFields();
