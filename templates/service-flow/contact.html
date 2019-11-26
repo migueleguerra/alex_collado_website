@@ -9,16 +9,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152470035-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-152470035-1');
-    </script>
+    <script type="text/javascript" src="../../js/go-analytics.js"></script>
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon-chef.png">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon-chef.png">
 
     <title>Alex Collado &#124; Contact</title>
   </head>
@@ -82,7 +76,7 @@
     </div>
 
     <div class="buttons">
-      <form action="javascript:sendData()" class="contact-form paragraph-1">
+      <form action="javascript:sendDataServiceFlow()" class="contact-form paragraph-1">
         <div class="contact-form__group u-margin-bottom-small">
           <label for="name" class="contact-form__label">Name:</label>
           <input name="name" id="name" type="text" class="contact-form__input"
@@ -117,5 +111,7 @@
       <div class="loading__img"></div>
     </div>
 
+    <script type="text/javascript" src="../../js/form-script.js"></script>
+    <script type="text/javascript" src="../../js/service-flow.js"></script>
   </body>
 </html>

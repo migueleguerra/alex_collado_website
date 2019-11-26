@@ -1,16 +1,11 @@
 const KEY_LOCAL_STORAGE = 'serviceFlowInformation';
-
 let selectedItems = [];
 
 function nextUrl(button, thisUrlName, nextUrlName) {
   let serviceInfo =
       JSON.parse(window.localStorage.getItem(KEY_LOCAL_STORAGE));
-
-  if(checkIfBeginning(serviceInfo)) {
-   return;
-  }
-
   if(!serviceInfo) {
+    window.localStorage.removeItem(KEY_LOCAL_STORAGE);
     const serviceInfoStart = {
       'where': button.innerText,
     };
@@ -23,19 +18,15 @@ function nextUrl(button, thisUrlName, nextUrlName) {
   window.location.href = urlBuild(nextUrlName);
 }
 
-function nextUrlMultipleOption(thisUrlName, nextUrlName) {
+function nextUrlMultipleOption(thisUrlName, nextUrlName, type = null) {
   let serviceInfo =
       JSON.parse(window.localStorage.getItem(KEY_LOCAL_STORAGE));
-
-  if(checkIfBeginning(serviceInfo)) {
-    return;
-  }
-  serviceInfo = setMultipleData(thisUrlName, serviceInfo);
+  serviceInfo = setMultipleData(thisUrlName, serviceInfo, type);
   addObjectToLocalStorage(serviceInfo);
   window.location.href = urlBuild(nextUrlName);
 }
 
-function setMultipleData(thisUrlName, serviceInfo) {
+function setMultipleData(thisUrlName, serviceInfo, type) {
   switch (thisUrlName) {
     case 'how-many':
       serviceInfo['how-many'] = {
@@ -55,6 +46,12 @@ function setMultipleData(thisUrlName, serviceInfo) {
       break;
 
     case 'calendar':
+      if (type === 'one-service') {
+        serviceInfo['calendar'] = {
+          'one-service-date': document.getElementById('from-date').value,
+        };
+        break;
+      }
       serviceInfo['calendar'] = {
         'from-date': document.getElementById('from-date').value,
         'to-date': document.getElementById('to-date').value,
@@ -69,17 +66,6 @@ function setMultipleData(thisUrlName, serviceInfo) {
       }
   }
   return serviceInfo;
-}
-
-function checkIfBeginning(serviceInfo) {
-  if(!serviceInfo.where) {
-    window.localStorage.removeItem(KEY_LOCAL_STORAGE);
-    const url = urlBuild('where');
-    window.location.href = url;
-    history.pushState(null, null, url);
-    return true;
-  }
-  return false;
 }
 
 function addObjectToLocalStorage(obj) {
@@ -119,4 +105,26 @@ function onClickFood(button) {
       selectedItems.splice(indexId, 1);
     }
   }
+}
+
+function sendDataServiceFlow() {
+  let formData = new FormData(document.querySelector('form'));
+  formData = getAndRemoveLocalStorageKey(formData);
+
+  if (formData.get('name') === '' || formData.get('email') === '' ||
+      grecaptcha.getResponse().length === 0) {
+    printErrorMessage();
+    return;
+  }
+  $(".loading").css("visibility", "visible");
+  formData = setEmailAttributes(formData);
+  emptyInputFields();
+  sendEmail(formData);
+}
+
+function getAndRemoveLocalStorageKey(formData) {
+  const serviceFlowData = window.localStorage.getItem(KEY_LOCAL_STORAGE);
+  formData.append('service-flow-information', serviceFlowData);
+  window.localStorage.removeItem(KEY_LOCAL_STORAGE);
+  return formData;
 }
