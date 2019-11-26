@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900&display=swap);
 @import url(//db.onlinewebfonts.com/c/752149278afff657a3b77d75b35463fc?family=PingFang+SC);
+.u-margin-bottom-tiny {
+  margin-bottom: 1rem !important; }
+
 .u-margin-bottom-small {
   margin-bottom: 2rem !important; }
 
@@ -124,6 +127,45 @@ body {
     color: #F0C824;
     transform: scale(1.05); }
 
+.btn-box, .btn-box:link, .btn-box:visited {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  min-width: 25rem;
+  cursor: pointer;
+  border: 1px solid rgba(252, 222, 97, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  background-color: #FCDE61;
+  transition: all .2s; }
+  @media only screen and (max-width: 50em) {
+    .btn-box, .btn-box:link, .btn-box:visited {
+      min-width: 22rem; } }
+  .btn-box:hover, .btn-box:link:hover, .btn-box:visited:hover {
+    transform: scale(1.05); }
+  .btn-box:focus, .btn-box:link:focus, .btn-box:visited:focus {
+    outline: none;
+    transform: scale(1.05); }
+
+.btn-count, .btn-count:link, .btn-count:visited {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid rgba(252, 222, 97, 0.8);
+  border-radius: 5px;
+  margin: 0.2rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  background-color: #FCDE61;
+  transition: all .2s; }
+  .btn-count:hover, .btn-count:link:hover, .btn-count:visited:hover {
+    transform: scale(1.05); }
+  .btn-count:focus, .btn-count:link:focus, .btn-count:visited:focus {
+    outline: none;
+    transform: scale(1.05); }
+
 .popup {
   align-items: center;
   justify-content: center;
@@ -190,14 +232,30 @@ body {
     @media only screen and (max-width: 50em) {
       .popup__text {
         margin-bottom: 2rem !important; } }
-  .popup__img--1 {
+  .popup__img-chef--1 {
     background-image: url(../../assets/img/gallery1-x2.jpg); }
-  .popup__img--2 {
-    background-image: url(../../assets/img/gallery2-x2.jpg); }
-  .popup__img--3 {
+  .popup__img-chef--2 {
+    background-image: url(../../assets/img/chef1-x2.jpg); }
+  .popup__img-chef--3 {
     background-image: url(../../assets/img/gallery3-x2.jpg); }
-  .popup__img--4 {
-    background-image: url(../../assets/img/gallery4-x2.jpg); }
+  .popup__img-chef--4 {
+    background-image: url(../../assets/img/chef2-x2.jpg); }
+  .popup__img-cooking--1 {
+    background-image: url(../../assets/img/cooking1-x2.jpg); }
+  .popup__img-cooking--2 {
+    background-image: url(../../assets/img/cooking2-x2.jpg); }
+  .popup__img-cooking--3 {
+    background-image: url(../../assets/img/cooking3-x2.jpg); }
+  .popup__img-cooking--4 {
+    background-image: url(../../assets/img/cooking-classes-x2.jpg); }
+  .popup__img-mezcal--1 {
+    background-image: url(../../assets/img/mezcal1-x2.jpg); }
+  .popup__img-mezcal--2 {
+    background-image: url(../../assets/img/mezcal-expereince-x2.png); }
+  .popup__img-mezcal--3 {
+    background-image: url(../../assets/img/mezcal2-x2.jpg); }
+  .popup__img-mezcal--4 {
+    background-image: url(../../assets/img/mezcal3-x2.jpg); }
   .popup__img--about-me {
     height: 50rem;
     opacity: 0.8; }
@@ -607,6 +665,8 @@ body {
         height: 35rem; }
       .services__cards--container:hover {
         transform: scale(1.05); }
+  .services__button {
+    text-align: center; }
 
 .testimonials {
   grid-column: full-start / full-end;
@@ -784,6 +844,11 @@ body {
       .footer__social--icon--medium:hover {
         fill: #FCDE61;
         transform: scale(1.3); }
+      .footer__social--icon--facebook {
+        position: relative;
+        height: 2.6rem;
+        width: 2.6rem;
+        bottom: 2px; }
     .footer__social--icon:hover {
       fill: #FCDE61;
       transform: scale(1.3); }
@@ -870,3 +935,130 @@ textarea {
   justify-content: center; }
   .error-container__img {
     height: 15rem; }
+
+.service-flow {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  @media only screen and (max-width: 37.5em) {
+    .service-flow {
+      height: 100%;
+      padding: 5rem 0; } }
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15rem; }
+  @media only screen and (max-width: 37.5em) {
+    .timeline {
+      margin-bottom: 8rem; } }
+  .timeline__icon {
+    fill: #9E9E9E;
+    width: 3rem;
+    height: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .timeline__icon {
+        margin: 0 1rem;
+        width: 2rem;
+        height: 2rem; } }
+  .timeline__line {
+    display: flex;
+    align-self: flex-end;
+    margin: 0 2rem;
+    width: 2rem;
+    height: 1.5rem; }
+    @media only screen and (max-width: 50em) {
+      .timeline__line {
+        margin: 0 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .timeline__line {
+        display: none; } }
+
+.timeline a:not(:first-child) {
+  margin-left: 2rem; }
+
+.title {
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .title {
+      width: 90%; } }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .buttons button {
+    min-width: 25rem; }
+
+.buttons-box {
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .buttons-box {
+      flex-direction: column; } }
+  .buttons-box > * {
+    margin: 0 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .buttons-box > * {
+        margin: 0; } }
+
+.box-icon {
+  fill: #212021;
+  width: 8rem;
+  height: 8rem; }
+
+.content-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif; }
+  .content-buttons__group {
+    display: flex;
+    align-items: center; }
+  .content-buttons__input {
+    border: 0;
+    margin: 0 3rem 0 4rem;
+    width: 3rem;
+    font-size: 2.5rem; }
+  .content-buttons__label {
+    text-transform: uppercase; }
+
+.content-date {
+  font-size: 1.6rem;
+  font-family: "PingFang+SC", sans-serif;
+  display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .content-date {
+      flex-direction: column;
+      align-items: flex-end; } }
+  .content-date__group {
+    margin: 0 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .content-date__group {
+        margin: 1rem 0; } }
+  .content-date__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    width: 14rem;
+    padding: 1rem;
+    text-align: center; }
+  .content-date__label {
+    margin-right: 0.5rem; }
+
+.buttons-box-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .buttons-box-block > * {
+    margin-bottom: 2rem; }
+  .buttons-box-block__group > * {
+    margin: 0 1rem; }
+  @media only screen and (max-width: 50em) {
+    .buttons-box-block__group {
+      width: 95%; } }
