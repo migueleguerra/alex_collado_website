@@ -137,16 +137,54 @@ function getAndRemoveLocalStorageKey(formData) {
 }
 
 function setServiceFlowData(formData, serviceFlowData) {
-  formData.append('where', serviceFlowData.where);
-  formData.append('what', serviceFlowData.what);
-  formData.append('type-service', serviceFlowData['type-service']);
-  formData.append('how-many', serviceFlowData['how-many']);
-  formData.append('meal', serviceFlowData.meal);
-  formData.append('food', serviceFlowData.food);
-  formData.append('stove', serviceFlowData.stove);
-  formData.append('hobs', serviceFlowData.hobs);
-  formData.append('oven', serviceFlowData.oven);
-  formData.append('calendar', serviceFlowData.calendar);
-  formData.append('allergies', serviceFlowData.allergies);
+  if (serviceFlowData) {
+    formData.append('where', serviceFlowData.where);
+    formData.append('what', serviceFlowData.what);
+    formData.append('typeService', serviceFlowData['type-service']);
+    
+    if (serviceFlowData['how-many']) {
+      formData.append('adults', serviceFlowData['how-many'].adults);
+      formData.append('children', serviceFlowData['how-many'].children);
+      formData.append('seniors', serviceFlowData['how-many'].seniors);
+    }
+
+    formData.append('meal', serviceFlowData.meal);
+
+    if (serviceFlowData.food) {
+      formData.append('foodMessage', serviceFlowData.food['message-food']);
+      formData.append(
+        'selectedFood', 
+        getStringFromArray(serviceFlowData.food['selected-food'])
+      );
+    }
+
+    formData.append('stove', serviceFlowData.stove);
+    formData.append('hobs', serviceFlowData.hobs);
+    formData.append('oven', serviceFlowData.oven);
+
+    if (serviceFlowData.calendar) {
+      formData.append(
+        'oneServiceDate', serviceFlowData.calendar['one-service-date']);
+      formData.append('fromDate', serviceFlowData.calendar['from-date']);
+      formData.append('toDate', serviceFlowData.calendar['to-date']);
+    }
+    
+    if (serviceFlowData.allergies) {
+      formData.append(
+        'allergiesMessage', serviceFlowData.allergies['message-allergies']);
+      formData.append(
+        'selectedAllergies',
+        getStringFromArray(serviceFlowData.allergies['selected-allergies'])
+      );
+    }
+  }
+  
   return formData;
+}
+
+function getStringFromArray(selectedItems) {
+  if(selectedItems) {
+    return selectedItems.toString();
+  }
+  return '';
 }
