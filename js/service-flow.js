@@ -63,7 +63,7 @@ function setMultipleData(thisUrlName, serviceInfo, type) {
       serviceInfo['allergies'] = {
         'selected-allergies': selectedItems,
         'message-allergies':
-        document.getElementById('message-allergies').value
+        document.getElementById('message-allergies').value,
       };
       document.getElementById('message-allergies').value = '';
       break;
@@ -123,14 +123,30 @@ function sendDataServiceFlow() {
 
   formData = getAndRemoveLocalStorageKey(formData);
   $(".loading").css("visibility", "visible");
-  formData = setEmailAttributes(formData);
+  formData = setEmailAttributes(formData, 'template_f88f88');
   emptyInputFields();
   sendEmail(formData);
 }
 
 function getAndRemoveLocalStorageKey(formData) {
-  const serviceFlowData = window.localStorage.getItem(KEY_LOCAL_STORAGE);
-  formData.append('service-flow-information', serviceFlowData);
+  const serviceFlowData =
+      JSON.parse(window.localStorage.getItem(KEY_LOCAL_STORAGE));
+  formData = setServiceFlowData(formData, serviceFlowData);
   window.localStorage.removeItem(KEY_LOCAL_STORAGE);
+  return formData;
+}
+
+function setServiceFlowData(formData, serviceFlowData) {
+  formData.append('where', serviceFlowData.where);
+  formData.append('what', serviceFlowData.what);
+  formData.append('type-service', serviceFlowData['type-service']);
+  formData.append('how-many', serviceFlowData['how-many']);
+  formData.append('meal', serviceFlowData.meal);
+  formData.append('food', serviceFlowData.food);
+  formData.append('stove', serviceFlowData.stove);
+  formData.append('hobs', serviceFlowData.hobs);
+  formData.append('oven', serviceFlowData.oven);
+  formData.append('calendar', serviceFlowData.calendar);
+  formData.append('allergies', serviceFlowData.allergies);
   return formData;
 }

@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca4863f9-7bcf-49c4-b2a2-cf90ef35c4c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/allergies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/calendar-one-service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/hobs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/oven.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/stove.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/allergies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/calendar-one-service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/hobs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/how-many.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/oven.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/stove.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/allergies.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/food.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/hobs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/how-many.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/oven.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/stove.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/form-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/form-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/service-flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/service-flow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/allergies.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/allergies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/calendar-one-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/calendar-one-service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/food.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/hobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/hobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/how-many.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/how-many.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/meal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/oven.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/oven.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/stove.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/stove.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/type-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/type-service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/what.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/what.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service-flow/where.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/where.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +96,7 @@
       <workItem from="1574187937544" duration="4061000" />
       <workItem from="1574273664787" duration="18459000" />
       <workItem from="1574722750515" duration="18195000" />
-      <workItem from="1574784096359" duration="11917000" />
+      <workItem from="1574784096359" duration="18257000" />
     </task>
     <servers />
   </component>

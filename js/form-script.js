@@ -11,7 +11,7 @@ function sendData() {
   $(".loading").css("visibility", "visible");
   formData = setEmailAttributes(formData);
   emptyInputFields();
-  sendEmail(formData);
+  sendEmail(formData, 'template_fTVZQWGb');
 }
 
 function printErrorMessage() {
@@ -33,9 +33,9 @@ function emptyInputFields() {
   document.getElementById('message').value = "";
 }
 
-function setEmailAttributes(formData) {
+function setEmailAttributes(formData, template_id) {
   formData.append('service_id', 'default_service');
-  formData.append('template_id', 'template_fTVZQWGb');
+  formData.append('template_id', template_id);
   formData.append('user_id', 'user_RjYoUr6zpBN3O4umVqmJ3');
   return formData;
 }
