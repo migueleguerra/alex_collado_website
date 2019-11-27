@@ -55,6 +55,8 @@ body {
     color: #ffffff; }
   .paragraph-1--secondary {
     color: #212021; }
+  .paragraph-1--tertiary {
+    color: #F0C824; }
 
 .btn, .btn:link, .btn:visited {
   -webkit-appearance: none;
