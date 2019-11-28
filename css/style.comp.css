@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900&display=swap);
-@import url(//db.onlinewebfonts.com/c/752149278afff657a3b77d75b35463fc?family=PingFang+SC);
+@import url(https://db.onlinewebfonts.com/c/752149278afff657a3b77d75b35463fc?family=PingFang+SC);
 .u-margin-bottom-tiny {
   margin-bottom: 1rem !important; }
 
@@ -879,7 +879,7 @@ body {
   .contact-form__input {
     padding: 1.5rem 2rem;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     border-radius: .5rem;
     border: 1px solid rgba(0, 0, 0, 0.4);
     min-width: 40rem; }
@@ -892,7 +892,7 @@ body {
 
 textarea {
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   height: 10rem; }
 
 .loading {

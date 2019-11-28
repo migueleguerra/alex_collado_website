@@ -87,13 +87,13 @@ function urlBuild(nextUrlName) {
 }
 
 function plusButton(plus) {
-  let inputElement = plus.previousElementSibling;
+  let inputElement = plus.previousElementSibling.previousElementSibling;
   inputElement.value = (parseInt(inputElement.value) + 1).toString();
   document.getElementById(inputElement.id).value = inputElement.value;
 }
 
-function minusButton(plus) {
-  let inputElement = plus.previousElementSibling.previousElementSibling;
+function minusButton(minus) {
+  let inputElement = minus.previousElementSibling;
   let count = parseInt(inputElement.value);
   if (count > 0) {
     document.getElementById(inputElement.id).value = count - 1;
