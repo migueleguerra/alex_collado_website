@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900&display=swap);
-@import url(https://db.onlinewebfonts.com/c/752149278afff657a3b77d75b35463fc?family=PingFang+SC);
+@import url(https://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900&display=swap);
 .u-margin-bottom-tiny {
   margin-bottom: 1rem !important; }
 
@@ -27,7 +27,7 @@ html {
       font-size: 50%; } }
 
 body {
-  font-family: "PingFang+SC", sans-serif;
+  font-family: "Heebo", sans-serif;
   color: #212021;
   background-color: #ffffff;
   line-height: 1.4;
@@ -43,6 +43,7 @@ body {
   .heading--1 {
     font-size: 5.5rem;
     font-weight: 900;
+    letter-spacing: 2px;
     color: #ffffff; }
   .heading--2 {
     font-size: 4rem; }
@@ -1030,7 +1031,7 @@ textarea {
 
 .content-date {
   font-size: 1.6rem;
-  font-family: "PingFang+SC", sans-serif;
+  font-family: "Heebo", sans-serif;
   display: flex; }
   @media only screen and (max-width: 37.5em) {
     .content-date {
