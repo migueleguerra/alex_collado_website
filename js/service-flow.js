@@ -123,7 +123,7 @@ function sendDataServiceFlow() {
 
   formData = getAndRemoveLocalStorageKey(formData);
   $(".loading").css("visibility", "visible");
-  formData = setEmailAttributes(formData, 'template_f88f88');
+  formData = setEmailAttributes(formData, 'template_services');
   emptyInputFields();
   sendEmail(formData);
 }

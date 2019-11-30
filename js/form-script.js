@@ -1,4 +1,5 @@
-emailjs.init("user_RjYoUr6zpBN3O4umVqmJ3");
+const EMAIL_JS_ID = "user_RjYoUr6zpBN3O4umVqmJ3";  
+emailjs.init(EMAIL_JS_ID);
 
 function sendData() {
   let formData = new FormData(document.querySelector('form'));
@@ -9,9 +10,9 @@ function sendData() {
     return;
   }
   $(".loading").css("visibility", "visible");
-  formData = setEmailAttributes(formData);
+  formData = setEmailAttributes(formData, 'template_contact');
   emptyInputFields();
-  sendEmail(formData, 'template_fTVZQWGb');
+  sendEmail(formData);
 }
 
 function printErrorMessage() {
@@ -36,11 +37,11 @@ function emptyInputFields() {
 function setEmailAttributes(formData, template_id) {
   formData.append('service_id', 'default_service');
   formData.append('template_id', template_id);
-  formData.append('user_id', 'user_RjYoUr6zpBN3O4umVqmJ3');
+  formData.append('user_id', EMAIL_JS_ID);
   return formData;
 }
 
-function urlFinalBuildAndSend(nextUrlName) {
+function redirectFinalUrl(nextUrlName) {
   const url = window.location.protocol + '//' +
       window.location.host + '/templates/' + nextUrlName + '.html';
   window.location.href = url;
@@ -54,8 +55,8 @@ function sendEmail(formData) {
     contentType: false,
     processData: false
   }).done(function() {
-    urlFinalBuildAndSend('success');
+    redirectFinalUrl('success');
   }).fail(function(error) {
-    urlFinalBuildAndSend('error');
+    redirectFinalUrl('error');
   });
 }
