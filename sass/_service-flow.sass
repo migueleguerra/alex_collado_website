@@ -39,9 +39,16 @@
 
     @media only screen and (max-width: $bp-small)
       display: none
+    
+  &__link
+    transition: all .2s
 
-.timeline a:not(:first-child)
-  margin-left: 2rem
+    &:hover
+      transform: $button-scale-footer
+
+    &:focus
+      outline: none
+      transform: $button-scale-footer
 
 .title
   text-align: center
