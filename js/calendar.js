@@ -1,18 +1,18 @@
-$("#from-date").datepicker({
-  defaultDate: "+1d",
+$('#from-date').datepicker({
+  defaultDate: '+1d',
   changeMonth: false,
   numberOfMonths: 1,
-  minDate: "+1d",
+  minDate: '+1d',
   onClose: function(selectedDate) {
-    $("#to-date").datepicker("option", "minDate", selectedDate );
-    $("#to-date").datepicker(
-        "option", "maxDate", new_date(selectedDate, 365));
+    $('#to-date').datepicker('option', 'minDate', selectedDate );
+    $('#to-date').datepicker(
+        'option', 'maxDate', new_date(selectedDate, 365));
   }
 });
 
 
-$("#to-date").datepicker({
-  defaultDate: "+1w",
+$('#to-date').datepicker({
+  defaultDate: '+1w',
   changeMonth: false,
   numberOfMonths: 1
 });
@@ -26,5 +26,5 @@ function new_date(old_date, days_after) {
   const newMonth = myDate.getMonth()+1;
   const newDay = myDate.getDate();
   const newYear = myDate.getFullYear();
-  return output = newMonth + "/" + newDay + "/" + newYear;
+  return output = newMonth + '/' + newDay + '/' + newYear;
 }

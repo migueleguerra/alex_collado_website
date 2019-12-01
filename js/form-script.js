@@ -1,4 +1,4 @@
-const EMAIL_JS_ID = "user_RjYoUr6zpBN3O4umVqmJ3";  
+const EMAIL_JS_ID = 'user_RjYoUr6zpBN3O4umVqmJ3';  
 emailjs.init(EMAIL_JS_ID);
 
 function sendData() {
@@ -9,7 +9,7 @@ function sendData() {
     printErrorMessage();
     return;
   }
-  $(".loading").css("visibility", "visible");
+  $('.loading').css('visibility', 'visible');
   formData = setEmailAttributes(formData, 'template_contact');
   emptyInputFields();
   sendEmail(formData);
@@ -29,9 +29,9 @@ function printErrorMessage() {
 }
 
 function emptyInputFields() {
-  document.getElementById('name').value = "";
-  document.getElementById('email').value = "";
-  document.getElementById('message').value = "";
+  document.getElementById('name').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
 }
 
 function setEmailAttributes(formData, template_id) {
