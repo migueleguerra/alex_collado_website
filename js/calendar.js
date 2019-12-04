@@ -6,10 +6,9 @@ $('#from-date').datepicker({
   onClose: function(selectedDate) {
     $('#to-date').datepicker('option', 'minDate', selectedDate );
     $('#to-date').datepicker(
-        'option', 'maxDate', new_date(selectedDate, 365));
+        'option', 'maxDate', newDate(selectedDate, 365));
   }
 });
-
 
 $('#to-date').datepicker({
   defaultDate: '+1w',
@@ -17,12 +16,12 @@ $('#to-date').datepicker({
   numberOfMonths: 1
 });
 
-function new_date(old_date, days_after) {
-  const month = parseInt(old_date.substring(0, 2))-1;
-  const day = parseInt(old_date.substring(3, 5));
-  const year = parseInt(old_date.substring(6, 10));
+function newDate(oldDate, daysAfter) {
+  const month = parseInt(oldDate.substring(0, 2))-1;
+  const day = parseInt(oldDate.substring(3, 5));
+  const year = parseInt(oldDate.substring(6, 10));
   const myDate = new Date(year, month, day);
-  myDate.setDate(myDate.getDate() + days_after);
+  myDate.setDate(myDate.getDate() + daysAfter);
   const newMonth = myDate.getMonth()+1;
   const newDay = myDate.getDate();
   const newYear = myDate.getFullYear();
