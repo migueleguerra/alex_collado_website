@@ -5,7 +5,7 @@ function sendData() {
   let formData = new FormData(document.querySelector('form'));
 
   if (formData.get('name') === '' || formData.get('email') === '' ||
-    grecaptcha.getResponse().length === 0) {
+      formData.get('phone') === '' || grecaptcha.getResponse().length === 0) {
     printErrorMessage();
     return;
   }
@@ -32,6 +32,7 @@ function emptyInputFields() {
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
   document.getElementById('message').value = '';
+  document.getElementById('phone').value = '';
 }
 
 function setEmailAttributes(formData, template_id) {

@@ -116,7 +116,7 @@ function onClickFood(button) {
 function sendDataServiceFlow() {
   let formData = new FormData(document.querySelector('form'));
   if (formData.get('name') === '' || formData.get('email') === '' ||
-      grecaptcha.getResponse().length === 0) {
+      formData.get('phone') === '' || grecaptcha.getResponse().length === 0) {
     printErrorMessage();
     return;
   }
