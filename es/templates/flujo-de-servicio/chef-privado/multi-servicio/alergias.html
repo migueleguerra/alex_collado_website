@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../../../../assets/img/favicon-chef.png">
+
+    <title>Alex Collado &#124; Allergies</title>
+  </head>
+  <body class="service-flow">
+    <div class="timeline">
+      <a href="/templates/service-flow/where.html" 
+        class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-placeholder"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/what.html" 
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-service"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/multiple-service/calendar.html" 
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-calendar"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/multiple-service/how-many.html" 
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-user"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/multiple-service/food.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-cooking"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/multiple-service/stove.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-stove"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <svg class="timeline__icon" style="fill: #F0C824">
+        <use xlink:href="../../../../assets/icons/sprite.svg#icon-exclamation"></use>
+      </svg>
+    </div>
+
+    <div class="title">
+      <h3 class="heading--2 u-margin-bottom-big">
+        Any food allergies, restrictions or special request?
+      </h3>
+    </div>
+
+    <div class="buttons-box-block">
+      <div class="buttons-box-block__group">
+        <button id="vegan" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
+          <svg class="box-icon u-margin-bottom-tiny">
+            <use xlink:href="../../../../assets/icons/sprite.svg#icon-vegetables"></use>
+          </svg>
+          <p>Vegan</p>
+        </button>
+        <button id="gluten-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
+          <svg class="box-icon u-margin-bottom-tiny">
+            <use xlink:href="../../../../assets/icons/sprite.svg#icon-gluten-free"></use>
+          </svg>
+          <p>Gluten Free</p>
+        </button>
+        <button id="sea-food-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
+          <svg class="box-icon u-margin-bottom-tiny">
+            <use xlink:href="../../../../assets/icons/sprite.svg#icon-sea-food-free"></use>
+          </svg>
+          <p>Sea Food Free</p>
+        </button>
+        <button id="nut free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
+          <svg class="box-icon u-margin-bottom-tiny">
+            <use xlink:href="../../../../assets/icons/sprite.svg#icon-nut-free"></use>
+          </svg>
+          <p>Nut Free</p>
+        </button>
+        <button id="dairy-free" class="btn-box u-margin-bottom-small"
+                onclick="onClickFood(this)">
+          <svg class="box-icon u-margin-bottom-tiny">
+            <use xlink:href="../../../../assets/icons/sprite.svg#icon-dairy-free"></use>
+          </svg>
+          <p>Dairy Free</p>
+        </button>
+      </div>
+      <div class="buttons-box-block__group u-margin-bottom-medium">
+        <textarea name="message" id="message-allergies"
+                  class="contact-form__input" placeholder="Some other requests?"></textarea>
+      </div>
+      <div class="buttons-box-block__group">
+          <button class="btn btn--primary u-margin-bottom-small"
+                  onclick="nextUrlMultipleOption(
+                      'allergies', 'private-chef/multiple-service/contact')">
+            Continue
+          </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../../../js/service-flow.js"></script>
+  </body>
+</html>

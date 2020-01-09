@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152470035-1"></script>
+    <script type="text/javascript" src="../../js/go-analytics.js"></script>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon-chef.png">
+
+    <title>Alex Collado &#124; Contacto</title>
+  </head>
+  <body class="contact">
+    <a href="/es/" class="popup__close">&times;</a>
+    <h2 class="heading--2 u-margin-bottom-medium">¿Qué puedo hacer por ti?</h2>
+    <form action="javascript:sendData()" class="contact-form paragraph-1">
+      <div class="contact-form__group u-margin-bottom-small">
+        <label for="name" class="contact-form__label">Nombre:</label>
+        <input name="name" id="name" type="text" class="contact-form__input"
+            placeholder="Nombre *" required>
+      </div>
+
+      <div class="contact-form__group u-margin-bottom-small">
+        <label for="email" class="contact-form__label">Correo:</label>
+        <input name="email" id="email" type="email"
+            class="contact-form__input" placeholder="Correo *" required>
+      </div>
+
+      <div class="contact-form__group u-margin-bottom-small">
+        <label for="phone" class="contact-form__label">Teléfono:</label>
+        <input name="phone" id="phone" type="tel"
+            class="contact-form__input" placeholder="Teléfono *" required>
+      </div>
+
+      <div class="contact-form__group u-margin-bottom-small">
+        <label for="message" class="contact-form__label">Mensaje:</label>
+        <textarea name="message" id="message"
+            class="contact-form__input" placeholder="Mensaje"></textarea>
+      </div>
+
+      <div class="g-recaptcha u-margin-bottom-small"
+           data-sitekey="6LdgZcIUAAAAAAfLiy41DeX5T_IlyT5wwSiss27I"></div>
+
+      <div id="error-msg" class="contact__error-msg u-margin-bottom-small">
+      </div>
+
+      <div class="contact-form__group">
+        <input type="submit" value="enviar" class="btn btn--primary">
+      </div>
+    </form>
+
+    <div class="loading">
+      <div class="loading__img"></div>
+    </div>
+
+    <script type="text/javascript" src="../../js/form-script.js"></script>
+  </body>
+</html>

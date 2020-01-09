@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="shortcut icon" type="image/png" href="../../../../assets/img/favicon-chef.png">
+
+    <title>Alex Collado &#124; Calendar</title>
+  </head>
+  <body class="service-flow">
+    <div class="timeline">
+      <a href="/templates/service-flow/where.html"
+        class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-placeholder"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/what.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-service"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/one-service/how-many.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-user"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/one-service/meal.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-cutlery"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/one-service/food.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-cooking"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <a href="/templates/service-flow/private-chef/one-service/stove.html"
+          class="timeline__link">
+        <svg class="timeline__icon">
+          <use xlink:href="../../../../assets/icons/sprite.svg#icon-stove"></use>
+        </svg>
+      </a>
+      <svg class="timeline__line" >
+        <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
+      </svg>
+      <svg class="timeline__icon" style="fill: #F0C824">
+        <use xlink:href="../../../../assets/icons/sprite.svg#icon-calendar"></use>
+      </svg>
+    </div>
+
+    <div class="title">
+      <h3 class="heading--2 u-margin-bottom-big">When do you need the service?</h3>
+    </div>
+
+    <div class="content-date u-margin-bottom-big">
+      <div class="content-date__group">
+        <input class="content-date__input" id="from-date" name="from-date" 
+                type="text" placeholder="mm/dd/yyyy" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn--primary u-margin-bottom-small"
+              onclick="nextUrlMultipleOption(
+                  'calendar', 'private-chef/one-service/allergies', 'one-service')">
+        Continue
+      </button>
+    </div>
+
+    <script type="text/javascript" src="../../../../js/service-flow.js"></script>
+    <script type="text/javascript" src="../../../../js/calendar.js"></script>
+  </body>
+</html>
