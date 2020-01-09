@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4863f9-7bcf-49c4-b2a2-cf90ef35c4c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/calendario.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/calendario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/alergias.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/alergias.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/calendario-servicio-unico.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/calendario-servicio-unico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/contacto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/estufa.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/estufa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/horno.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/horno.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/quemadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/clases-de-cocina/quemadores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service-flow/cooking-classes/oven.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/cooking-classes/oven.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/alergias.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/alergias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/calendario-servicio-unico.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/calendario-servicio-unico.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/contacto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/estufa.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/estufa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/horno.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/horno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/personas.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/personas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/quemadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/degustacion-de-mezcal/quemadores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/servicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/servicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/oven.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/mezcal-experience/oven.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/oven.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/one-service/oven.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +105,7 @@
       <workItem from="1574722750515" duration="18195000" />
       <workItem from="1574784096359" duration="18493000" />
       <workItem from="1575930688915" duration="371000" />
-      <workItem from="1578590089970" duration="4437000" />
+      <workItem from="1578590089970" duration="6779000" />
     </task>
     <servers />
   </component>
