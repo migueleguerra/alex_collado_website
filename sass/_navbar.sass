@@ -2,8 +2,6 @@
   grid-column: 7 / center-end
   font-size: 2rem
   grid-row: 1 / 2
-  display: flex
-  justify-content: flex-end
   height: 10vh
   z-index: 3
 
@@ -13,7 +11,7 @@
 
   &__checkbox
     display: none
-    
+
   &__checkbox:checked ~ &__background
     transform: scale(80)
     background-color: $color-primary
@@ -26,7 +24,7 @@
 
   &__checkbox:checked + &__button &__icon
     background-color: transparent
-  
+
   &__checkbox:checked + &__button &__icon:before
     top: 0
     transform: rotate(45deg)
@@ -48,10 +46,10 @@
       top: 2rem
       right: 4rem
       transition: transform .8s
-  
+
   &__button
     display: none
-    
+
     @media only screen and (max-width: $bp-medium)
       display: inline
       background-color: rgba($color-primary, .8)
@@ -71,6 +69,8 @@
       transform: scale(1.2)
 
   &__container
+    margin-left: 10rem
+
     @media only screen and (max-width: $bp-medium)
       margin: 0
       position: fixed
@@ -94,6 +94,9 @@
       top: 40%
       left: 50%
       transform: translate(-50%, -50%)
+
+  &__item
+    white-space: nowrap
 
   &__item:not(:last-child)
     margin-right: 5rem
@@ -138,16 +141,13 @@
       &:active
         color: $color-tertiary
 
-  &__language
-    display: flex
-    padding: 3rem
-    list-style: none
-
     &--selected
-      color: $color-secondary
+      color: $color-secondary !important
 
-    &--no-selected
-      color: $color-white
+    &--lang
+      font-size: 2rem !important
+
+  &__language
 
     li a
       text-decoration: none
@@ -156,6 +156,18 @@
 
     li a:hover
       color: $color-tertiary
+
+  &__languages
+    display: flex
+    justify-content: center
+
+  &__bar
+    color: $color-white
+    margin-right: 0.5rem
+    margin-left: 0.5rem
+
+    @media only screen and (max-width: $bp-medium)
+      margin-top: .2rem
 
   &__icon
     position: relative
