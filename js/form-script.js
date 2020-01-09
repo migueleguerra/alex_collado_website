@@ -17,9 +17,10 @@ function sendData() {
 
 function printErrorMessage() {
   const spanElement = document.createElement('span');
-  const text = document.createTextNode(
-      'Make sure you fill all input fields.'
-  );
+  const errorMessage = document.documentElement.lang === 'es' ? 
+    'Asegurate de llenar todos los campos requeridos.' :
+    'Make sure you fill all required input fields.'
+  const text = document.createTextNode(errorMessage);
   spanElement.appendChild(text);
   document.getElementById('error-msg').appendChild(spanElement);
 

@@ -82,8 +82,11 @@ function addObjectToLocalStorage(obj) {
 }
 
 function urlBuild(nextUrlName) {
+  const lang = document.documentElement.lang;
+  const language = lang === 'es' ? '/es' : '';
+  const folder = lang === 'es' ? '/flujo-de-servicio/' : '/service-flow/'
   return window.location.protocol + '//' +
-      window.location.host + '/templates/service-flow/' + nextUrlName + '.html';
+      window.location.host + language + '/templates' + folder + nextUrlName + '.html';
 }
 
 function plusButton(plus) {
