@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ca4863f9-7bcf-49c4-b2a2-cf90ef35c4c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/alergias.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/alergias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/alimentos.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/alimentos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/calendario.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/calendario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/contacto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/estufa.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/estufa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/horno.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/horno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/personas.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/personas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/quemadores.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/multi-servicio/quemadores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/contacto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/estufa.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/estufa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/horno.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/horno.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/personas.html" beforeDir="false" afterPath="$PROJECT_DIR$/es/templates/flujo-de-servicio/chef-privado/servicio-unico/personas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/oven.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service-flow/private-chef/multiple-service/oven.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +108,7 @@
       <workItem from="1574722750515" duration="18195000" />
       <workItem from="1574784096359" duration="18493000" />
       <workItem from="1575930688915" duration="371000" />
-      <workItem from="1578590089970" duration="303000" />
+      <workItem from="1578590089970" duration="2521000" />
     </task>
     <servers />
   </component>
