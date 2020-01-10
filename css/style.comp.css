@@ -281,10 +281,10 @@ body {
       .popup__img-mezcal--1 {
         background-image: url(../../assets/img/mezcal1-x2.jpg); } }
   .popup__img-mezcal--2 {
-    background-image: url(../../assets/img/mezcal-expereince-x1.png); }
+    background-image: url(../../assets/img/mezcal-experience-x1.png); }
     @media (min-resolution: 192dpi) and (min-width: 37.5em) {
       .popup__img-mezcal--2 {
-        background-image: url(../../assets/img/mezcal-expereince-x2.png); } }
+        background-image: url(../../assets/img/mezcal-experience-x2.png); } }
   .popup__img-mezcal--3 {
     background-image: url(../../assets/img/mezcal2-x1.jpg); }
     @media (min-resolution: 192dpi) and (min-width: 37.5em) {
@@ -708,7 +708,7 @@ body {
         position: absolute;
         height: 30rem;
         right: -8rem;
-        bottom: -8rem; }
+        bottom: -5rem; }
       .services__cards--container__cooking-classes-img {
         grid-column: 1 / 1;
         grid-row: 1 / 2;
