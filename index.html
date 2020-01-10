@@ -40,17 +40,17 @@
             <a href="templates/contact-form.html" class="nav__link">Contact</a>
           </li>
           <li class="nav__item">
-            <a href="https://medium.com/@alex.chefco" target="_blank" class="nav__link">Blog</a>
+            <a rel="noopener" href="https://medium.com/@alex.chefco" target="_blank" class="nav__link">Blog</a>
           </li>
           <div class="nav__languages">
             <li class="nav__language">
               <a href="https://www.alexchef.co/"
-                 class="nav__link nav__link--lang nav__link--selected">EN</a>
+                 class="nav__link nav__link--lang nav__link--selected">English</a>
             </li>
             <li class="nav__bar">|</li>
             <li class="nav__language">
               <a href="https://www.alexchef.co/es/"
-                 class="nav__link nav__link--lang">ES</a>
+                 class="nav__link nav__link--lang">Spanish</a>
             </li>
           </div>
         </ul>
@@ -78,7 +78,11 @@
     </header>
 
     <section id="section-about-me" class="about-me">
-      <img class="about-me__plate" src="assets/img/plate1-x2.png" alt="Chef Playa del Carmen">
+      <picture>
+        <source srcset="assets/img/plate1-x2.jp2" type="image/jp2">
+        <img srcset="assets/img/plate1-x1.png 1x, assets/img/plate1-x2.png 2x" 
+          alt="Chef Playa del Carmen" class="about-me__plate">
+      </picture>
       <div class="about-me__background"></div>
       <div class="about-me__text-container">
         <div class="about-me__text-container--title u-margin-bottom-small">
@@ -103,7 +107,13 @@
         </div>
       </div>
       <div class="about-me__img-container">
-        <img src="assets/img/alexphoto-x2.png" alt="Private Chef Playa del Carmen">
+        <picture>
+          <source srcset="assets/img/alexphoto-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+          <source srcset="assets/img/alexphoto-x2.jp2" type="image/jp2">
+          <source srcset="assets/img/alexphoto-x1.png" media="(max-width: 37.5em)">
+          <img srcset="assets/img/alexphoto-x1.png 1x, assets/img/alexphoto-x2.png 2x" 
+          alt="Private Chef Playa del Carmen" class="about-me__img-container--img">
+        </picture>
       </div>
     </section>
 
@@ -120,8 +130,13 @@
 
         <a href="#popup-private-chef" class="services__cards--container">
           <div class="services__cards--container__background"></div>
-          <img class="services__cards--container__private-chef-img"
-               src="assets/img/private-chef-x2.png" alt="Private Chef Playa del Carmen">
+          <picture>
+            <source srcset="assets/img/private-chef-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+            <source srcset="assets/img/private-chef-x2.jp2" type="image/jp2">
+            <source srcset="assets/img/private-chef-x1.png" media="(max-width: 37.5em)">
+            <img srcset="assets/img/private-chef-x1.png 1x, assets/img/private-chef-x2.png 2x"
+              class="services__cards--container__private-chef-img" alt="Private Chef Playa del Carmen">
+          </picture>
           <div class="services__cards--container__text">
             <h3 class="heading--3 u-margin-bottom-small">Private Chef</h3>
             <p class="paragraph-1">
@@ -133,8 +148,13 @@
 
         <a href="#popup-cooking-classes" class="services__cards--container">
           <div class="services__cards--container__background"></div>
-          <img class="services__cards--container__cooking-classes-img"
-               src="assets/img/cooking-classes-x2.jpg" alt="Cooking classes Playa del Carmen">
+          <picture>
+            <source srcset="assets/img/cooking-classes-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+            <source srcset="assets/img/cooking-classes-x2.jp2" type="image/jp2">
+            <source srcset="assets/img/cooking-classes-x1.png" media="(max-width: 37.5em)">
+            <img srcset="assets/img/cooking-classes-x1.jpg 1x, assets/img/cooking-classes-x2.jpg 2x"
+              class="services__cards--container__cooking-classes-img" alt="Cooking classes Playa del Carmen">
+          </picture>
           <div class="services__cards--container__text">
             <h3 class="heading--3 u-margin-bottom-small">Cooking Experience</h3>
             <p class="paragraph-1">
@@ -146,8 +166,14 @@
 
         <a href="#popup-mezcal-experience" class="services__cards--container">
           <div class="services__cards--container__background"></div>
-          <img class="services__cards--container__mezcal-experience-img"
-               src="assets/img/mezcal-expereince-x2.png" alt="Mezcal experience in Playa del Carmen">
+          <picture>
+            <source srcset="assets/img/mezcal-experience-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+            <source srcset="assets/img/mezcal-experience-x2.jp2" type="image/jp2">
+            <source srcset="assets/img/mezcal-experience-x1.png" media="(max-width: 37.5em)">
+            <img srcset="assets/img/mezcal-experience-x1.png 1x, assets/img/mezcal-experience-x2.png 2x"   
+              class="services__cards--container__mezcal-experience-img" 
+              alt="Mezcal experience in Playa del Carmen">
+          </picture>
           <div class="services__cards--container__text">
             <h3 class="heading--3 u-margin-bottom-small">Mezcal Experience</h3>
             <p class="paragraph-1">
@@ -164,7 +190,11 @@
     </section>
 
     <section class="testimonials">
-      <img class="testimonials__plate" src="assets/img/plate2-x2.png" alt="Private Chef Tulum">
+      <picture>
+        <source srcset="assets/img/plate2-x2.jp2" type="image/jp2">
+        <img srcset="assets/img/plate2-x1.png 1x, assets/img/plate2-x2.png 2x" 
+          class="testimonials__plate" alt="Private Chef Tulum">
+      </picture>
       <div class="testimonials__title">
         <img src="assets/img/title_line.png" alt="Private Chef Puerto Morelos">
         <h2 class="heading--2 u-margin-bottom-small">Testimonials</h2>
@@ -175,8 +205,14 @@
       <div class="testimonials__background">&nbsp;</div>
       <div class="testimonials__container">
         <div class="testimonials__card">
-          <img class="testimonials__card--img u-margin-bottom-small"
-              src="assets/img/client1.jpg" alt="Private Chef Playa del Carmen">
+          <picture>
+            <source srcset="assets/img/client1-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+            <source srcset="assets/img/client1-x2.jp2" type="image/jp2">
+            <source srcset="assets/img/client1-x1.png" media="(max-width: 37.5em)">
+            <img srcset="assets/img/client1-x1.jpg 1x, assets/img/client1-x2.jpg 2x" 
+            class="testimonials__card--img u-margin-bottom-small" 
+            alt="Private Chef Playa del Carmen">
+          </picture>
           <h3 class="heading--3 u-margin-bottom-small">Ambika Kumar Doran</h3>
           <p class="testimonials__card--text paragraph-1">
             "9 of us rented a house near Playa del Carmen the last week of December and arranged for
@@ -220,8 +256,11 @@
 
     <section class="form" id="section-form">
       <div class="form__container">
-        <img class="u-margin-bottom-medium" src="assets/img/plate3-x2.png"
-             alt="Mezcal Playa del Carmen">
+        <picture>
+          <source srcset="assets/img/plate3-x2.jp2" type="image/jp2">
+          <img srcset="assets/img/plate3-x1.png 1x, assets/img/plate3-x2.png 2x" 
+            class="u-margin-bottom-medium" alt="Mezcal Playa del Carmen">
+        </picture>
         <h2 class="heading--3 u-margin-bottom-medium">
           Are you ready for an unforgettable experience?
         </h2>
@@ -255,27 +294,27 @@
         </div>
         <div class="footer__copyright">
           <p>&#169; Copyright 2019 by Siria Lerma &
-            <a class="footer__contact--a"
+            <a class="footer__contact--a" rel="noopener"
               href="https://miguelguerra.mx" target="_blank">Miguel Guerra</a>
           </p>
         </div>
         <div class="footer__social">
-          <a href="https://www.instagram.com/alexchef.co/" target="_blank">
+          <a rel="noopener" href="https://www.instagram.com/alexchef.co/" target="_blank">
             <svg class="footer__social--icon">
               <use xlink:href="assets/icons/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
-          <a href="https://medium.com/@alex.chefco" target="_blank">
+          <a rel="noopener" href="https://medium.com/@alex.chefco" target="_blank">
             <svg class="footer__social--icon--medium">
               <use xlink:href="assets/icons/sprite.svg#icon-medium"></use>
             </svg>
           </a>
-          <a href="https://www.facebook.com/Alex-ChefCo-101088847993358" target="_blank">
+          <a rel="noopener" href="https://www.facebook.com/Alex-ChefCo-101088847993358" target="_blank">
             <svg class="footer__social--icon footer__social--icon--facebook">
               <use xlink:href="assets/icons/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
-          <a href="https://api.whatsapp.com/send?phone=+529841796461">
+          <a rel="noopener" href="https://api.whatsapp.com/send?phone=+529841796461">
             <svg class="footer__social--icon">
               <use xlink:href="assets/icons/sprite.svg#icon-whatsapp"></use>
             </svg>
@@ -376,8 +415,13 @@
           <a href="templates/service-flow/where.html" class="btn btn--primary">Get a Quote</a>
         </div>
         <div class="popup__right">
-          <img class="popup__img--about-me" src="../assets/img/about-me-x2.jpg"
-            alt="Private Chef Playa del Carmen">
+          <picture>
+            <source srcset="assets/img/about-me-x1.jp2" type="image/jp2" media="(max-width: 37.5em)">
+            <source srcset="assets/img/about-me-x2.jp2" type="image/jp2">
+            <source srcset="assets/img/about-me-x1.png" media="(max-width: 37.5em)">
+            <img srcset="assets/img/about-me-x1.jpg 1x, assets/img/about-me-x2.jpg 2x" 
+              class="popup__img--about-me" alt="Private Chef Playa del Carmen">
+          </picture>
         </div>
       </div>
     </div>

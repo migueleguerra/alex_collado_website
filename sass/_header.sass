@@ -4,9 +4,15 @@
   display: grid
   grid-template-columns: repeat(2, 1fr)
   height: 100vh
-  background-image: url(../assets/img/header-background3-x2.jpg)
+  background-image: url(../assets/img/header-background3-x1.jpg)
   background-size: cover
   background-position: bottom
+
+  @media (min-resolution: 192dpi) and (min-width: $bp-small)
+    background-image: url(../assets/img/header-background3-x2.jpg)
+
+  @media (min-width: $bp-largest)
+    background-image: url(../assets/img/header-background3-x2.jpg)
 
   &__background
     grid-column: 1 / -1

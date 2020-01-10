@@ -75,11 +75,6 @@
         clip-path: polygon(0 45%, 100% 60%, 100% 100%, 0 100%)
         z-index: 2
 
-      img
-        grid-column: 1 / 1
-        grid-row: 1 / 2
-        z-index: 1
-
       &__text
         grid-column: 1 / -1
         grid-row: 2 / 3
@@ -87,19 +82,29 @@
         margin: 3rem 2rem 2rem 2rem
 
       &__private-chef-img
+        grid-column: 1 / 1
+        grid-row: 1 / 2
+        z-index: 1
         position: absolute
         height: 30rem
         right: -8rem
         bottom: -8rem
 
       &__cooking-classes-img
+        grid-column: 1 / 1
+        grid-row: 1 / 2
+        z-index: 1
         position: absolute
         height: 45rem
         bottom: -10rem
 
       &__mezcal-experience-img
+        grid-column: 1 / 1
+        grid-row: 1 / 2
+        z-index: 1
         position: absolute
         height: 35rem
+        bottom: -10rem
 
       &:hover
         transform: $button-scale

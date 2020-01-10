@@ -236,29 +236,65 @@ body {
       .popup__text {
         margin-bottom: 2rem !important; } }
   .popup__img-chef--1 {
-    background-image: url(../../assets/img/gallery1-x2.jpg); }
+    background-image: url(../../assets/img/gallery1-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-chef--1 {
+        background-image: url(../../assets/img/gallery1-x2.jpg); } }
   .popup__img-chef--2 {
-    background-image: url(../../assets/img/chef1-x2.jpg); }
+    background-image: url(../../assets/img/chef1-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-chef--2 {
+        background-image: url(../../assets/img/chef1-x2.jpg); } }
   .popup__img-chef--3 {
-    background-image: url(../../assets/img/gallery3-x2.jpg); }
+    background-image: url(../../assets/img/gallery3-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-chef--3 {
+        background-image: url(../../assets/img/gallery3-x2.jpg); } }
   .popup__img-chef--4 {
-    background-image: url(../../assets/img/chef2-x2.jpg); }
+    background-image: url(../../assets/img/chef2-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-chef--4 {
+        background-image: url(../../assets/img/chef2-x2.jpg); } }
   .popup__img-cooking--1 {
-    background-image: url(../../assets/img/cooking1-x2.jpg); }
+    background-image: url(../../assets/img/cooking1-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-cooking--1 {
+        background-image: url(../../assets/img/cooking1-x2.jpg); } }
   .popup__img-cooking--2 {
-    background-image: url(../../assets/img/cooking2-x2.jpg); }
+    background-image: url(../../assets/img/cooking2-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-cooking--2 {
+        background-image: url(../../assets/img/cooking2-x2.jpg); } }
   .popup__img-cooking--3 {
-    background-image: url(../../assets/img/cooking3-x2.jpg); }
+    background-image: url(../../assets/img/cooking3-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-cooking--3 {
+        background-image: url(../../assets/img/cooking3-x2.jpg); } }
   .popup__img-cooking--4 {
-    background-image: url(../../assets/img/cooking-classes-x2.jpg); }
+    background-image: url(../../assets/img/cooking-classes-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-cooking--4 {
+        background-image: url(../../assets/img/cooking-classes-x2.jpg); } }
   .popup__img-mezcal--1 {
-    background-image: url(../../assets/img/mezcal1-x2.jpg); }
+    background-image: url(../../assets/img/mezcal1-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-mezcal--1 {
+        background-image: url(../../assets/img/mezcal1-x2.jpg); } }
   .popup__img-mezcal--2 {
-    background-image: url(../../assets/img/mezcal-expereince-x2.png); }
+    background-image: url(../../assets/img/mezcal-expereince-x1.png); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-mezcal--2 {
+        background-image: url(../../assets/img/mezcal-expereince-x2.png); } }
   .popup__img-mezcal--3 {
-    background-image: url(../../assets/img/mezcal2-x2.jpg); }
+    background-image: url(../../assets/img/mezcal2-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-mezcal--3 {
+        background-image: url(../../assets/img/mezcal2-x2.jpg); } }
   .popup__img-mezcal--4 {
-    background-image: url(../../assets/img/mezcal3-x2.jpg); }
+    background-image: url(../../assets/img/mezcal3-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .popup__img-mezcal--4 {
+        background-image: url(../../assets/img/mezcal3-x2.jpg); } }
   .popup__img--about-me {
     height: 50rem;
     opacity: 0.8; }
@@ -450,9 +486,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
-  background-image: url(../assets/img/header-background3-x2.jpg);
+  background-image: url(../assets/img/header-background3-x1.jpg);
   background-size: cover;
   background-position: bottom; }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    .header {
+      background-image: url(../assets/img/header-background3-x2.jpg); } }
+  @media (min-width: 75em) {
+    .header {
+      background-image: url(../assets/img/header-background3-x2.jpg); } }
   .header__background {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -577,11 +619,12 @@ body {
       .about-me__img-container {
         grid-column: 1 / 2;
         grid-row: 2 / -1; } }
-    .about-me__img-container img {
+    .about-me__img-container--img {
+      vertical-align: middle;
       position: relative;
       height: 60rem; }
       @media only screen and (max-width: 50em) {
-        .about-me__img-container img {
+        .about-me__img-container--img {
           height: 40rem; } }
 
 .services {
@@ -653,27 +696,33 @@ body {
         -webkit-clip-path: polygon(0 45%, 100% 60%, 100% 100%, 0 100%);
         clip-path: polygon(0 45%, 100% 60%, 100% 100%, 0 100%);
         z-index: 2; }
-      .services__cards--container img {
-        grid-column: 1 / 1;
-        grid-row: 1 / 2;
-        z-index: 1; }
       .services__cards--container__text {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         z-index: 2;
         margin: 3rem 2rem 2rem 2rem; }
       .services__cards--container__private-chef-img {
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+        z-index: 1;
         position: absolute;
         height: 30rem;
         right: -8rem;
         bottom: -8rem; }
       .services__cards--container__cooking-classes-img {
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+        z-index: 1;
         position: absolute;
         height: 45rem;
         bottom: -10rem; }
       .services__cards--container__mezcal-experience-img {
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+        z-index: 1;
         position: absolute;
-        height: 35rem; }
+        height: 35rem;
+        bottom: -10rem; }
       .services__cards--container:hover {
         transform: scale(1.05); }
   .services__button {
@@ -703,7 +752,7 @@ body {
     position: absolute;
     height: 25rem;
     right: 0;
-    top: 10rem; }
+    top: -10rem; }
     @media only screen and (max-width: 50em) {
       .testimonials__plate {
         display: none; } }
@@ -756,21 +805,45 @@ body {
       .gallery > * {
         height: 20rem; } }
   .gallery--1 {
-    background-image: url(../assets/img/gallery1-x2.jpg); }
+    background-image: url(../assets/img/gallery1-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--1 {
+        background-image: url(../assets/img/gallery1-x2.jpg); } }
   .gallery--2 {
-    background-image: url(../assets/img/gallery2-x2.jpg); }
+    background-image: url(../assets/img/gallery2-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--2 {
+        background-image: url(../assets/img/gallery2-x2.jpg); } }
   .gallery--3 {
-    background-image: url(../assets/img/gallery3-x2.jpg); }
+    background-image: url(../assets/img/gallery3-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--3 {
+        background-image: url(../assets/img/gallery3-x2.jpg); } }
   .gallery--4 {
-    background-image: url(../assets/img/gallery4-x2.jpg); }
+    background-image: url(../assets/img/gallery4-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--4 {
+        background-image: url(../assets/img/gallery4-x2.jpg); } }
   .gallery--5 {
-    background-image: url(../assets/img/gallery5-x2.jpg); }
+    background-image: url(../assets/img/gallery5-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--5 {
+        background-image: url(../assets/img/gallery5-x2.jpg); } }
   .gallery--6 {
-    background-image: url(../assets/img/gallery6-x2.jpg); }
+    background-image: url(../assets/img/gallery6-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--6 {
+        background-image: url(../assets/img/gallery6-x2.jpg); } }
   .gallery--7 {
-    background-image: url(../assets/img/gallery7-x2.jpg); }
+    background-image: url(../assets/img/gallery7-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--7 {
+        background-image: url(../assets/img/gallery7-x2.jpg); } }
   .gallery--8 {
-    background-image: url(../assets/img/gallery8-x2.jpg); }
+    background-image: url(../assets/img/gallery8-x1.jpg); }
+    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+      .gallery--8 {
+        background-image: url(../assets/img/gallery8-x2.jpg); } }
 
 .form {
   grid-column: full-start / full-end;
