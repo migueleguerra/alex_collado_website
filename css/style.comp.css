@@ -928,7 +928,10 @@ body {
         order: 1; } }
     .footer__social a {
       text-decoration: none;
-      margin-right: 1rem; }
+      margin-right: 1.5rem;
+      line-height: 0;
+      font-size: 0;
+      color: transparent; }
     .footer__social--icon {
       fill: #ffffff;
       cursor: pointer;
