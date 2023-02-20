@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="../../../../../css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../../../../../assets/img/favicon-chef.png">
+    <link rel="stylesheet" href="../../../../../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../../../assets/img/favicon-chef.png"
+    />
 
     <title>Alex Collado &#124; Personas</title>
   </head>
   <body class="service-flow">
     <div class="timeline">
-        <a href="/es/templates/flujo-de-servicio/donde.html"
-        class="timeline__link">
+      <a
+        href="/es/templates/flujo-de-servicio/donde.html"
+        class="timeline__link"
+      >
         <svg class="timeline__icon">
-          <use xlink:href="../../../../../assets/icons/sprite.svg#icon-placeholder"></use>
+          <use
+            xlink:href="../../../../../assets/icons/sprite.svg#icon-placeholder"
+          ></use>
         </svg>
       </a>
-      <svg class="timeline__line" >
+      <svg class="timeline__line">
         <use xlink:href="../../../../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <a href="/es/templates/flujo-de-servicio/servicio.html"
-          class="timeline__link">
+      <a
+        href="/es/templates/flujo-de-servicio/servicio.html"
+        class="timeline__link"
+      >
         <svg class="timeline__icon">
-          <use xlink:href="../../../../../assets/icons/sprite.svg#icon-service"></use>
+          <use
+            xlink:href="../../../../../assets/icons/sprite.svg#icon-service"
+          ></use>
         </svg>
       </a>
-      <svg class="timeline__line" >
+      <svg class="timeline__line">
         <use xlink:href="../../../../../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <svg class="timeline__icon" style="fill: #F0C824">
-        <use xlink:href="../../../../../../assets/icons/sprite.svg#icon-user"></use>
+      <svg class="timeline__icon" style="fill: #f0c824">
+        <use
+          xlink:href="../../../../../../assets/icons/sprite.svg#icon-user"
+        ></use>
       </svg>
     </div>
 
@@ -41,31 +55,43 @@
 
     <div class="content-buttons u-margin-bottom-big">
       <div class="content-buttons__group u-margin-bottom-small">
-        <label for="seniors" class="content-buttons__labels">TERCERA EDAD</label>
-        <input id="seniors" type="text" class="content-buttons__input" value="0">
-        <button class="btn-count" onclick="minusButton(this)">&#x2212;</button>
-        <button class="btn-count" onclick="plusButton(this)">&#x2B;</button>
-      </div>
-      <div class="content-buttons__group u-margin-bottom-small">
         <label for="adults" class="content-buttons__labels">ADULTOS</label>
-        <input id="adults" type="text" class="content-buttons__input" value="2">
+        <input
+          id="adults"
+          type="text"
+          class="content-buttons__input"
+          value="2"
+        />
         <button class="btn-count" onclick="minusButton(this)">&#x2212;</button>
         <button class="btn-count" onclick="plusButton(this)">&#x2B;</button>
       </div>
       <div class="content-buttons__group u-margin-bottom-small">
-        <label for="children" class="content-buttons__labels">NIÑOS</label>
-        <input id="children" type="text" class="content-buttons__input" value="0">
+        <label for="children" class="content-buttons__labels"
+          >NIÑOS (menor a 12)</label
+        >
+        <input
+          id="children"
+          type="text"
+          class="content-buttons__input"
+          value="0"
+        />
         <button class="btn-count" onclick="minusButton(this)">&#x2212;</button>
         <button class="btn-count" onclick="plusButton(this)">&#x2B;</button>
       </div>
     </div>
 
     <div class="buttons">
-      <button class="btn btn--primary u-margin-bottom-small"
-              onclick="nextUrlMultipleOption('how-many', 'chef-privado/servicio-unico/comida')"
-      >Siguiente</button>
+      <button
+        class="btn btn--primary u-margin-bottom-small"
+        onclick="nextUrlMultipleOption('how-many', 'chef-privado/servicio-unico/comida')"
+      >
+        Siguiente
+      </button>
     </div>
 
-    <script type="text/javascript" src="../../../../../js/service-flow.js"></script>
+    <script
+      type="text/javascript"
+      src="../../../../../js/service-flow.js"
+    ></script>
   </body>
 </html>
