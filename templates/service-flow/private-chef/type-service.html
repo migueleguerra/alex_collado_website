@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../../../assets/img/favicon-chef.png">
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../assets/img/favicon-chef.png"
+    />
 
     <title>Alex Collado &#124; Service</title>
   </head>
   <body class="service-flow">
     <div class="timeline">
-      <svg class="timeline__icon">
-        <use xlink:href="../../../assets/icons/sprite.svg#icon-placeholder"></use>
-      </svg>
-      <svg class="timeline__line" >
+      <a href="/templates/service-flow/location.html" class="timeline__link">
+        <svg class="timeline__icon">
+          <use
+            xlink:href="../../../assets/icons/sprite.svg#icon-placeholder"
+          ></use>
+        </svg>
+      </a>
+      <svg class="timeline__line">
         <use xlink:href="../../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <svg class="timeline__icon" style="fill: #F0C824">
+      <svg class="timeline__icon" style="fill: #f0c824">
         <use xlink:href="../../../assets/icons/sprite.svg#icon-service"></use>
       </svg>
     </div>
@@ -30,17 +38,25 @@
     </div>
 
     <div class="buttons-box">
-      <button id="private_chef" class="btn-box u-margin-bottom-small"
-              onclick="nextUrl(this, 'type-service', 'private-chef/one-service/how-many')">
+      <button
+        id="private_chef"
+        class="btn-box u-margin-bottom-small"
+        onclick="nextUrl(this, 'type-service', 'private-chef/one-service/how-many')"
+      >
         <svg class="box-icon u-margin-bottom-small">
           <use xlink:href="../../../assets/icons/sprite.svg#icon-food"></use>
         </svg>
         <p>One Service</p>
       </button>
-      <button id="cooking_classes" class="btn-box u-margin-bottom-small"
-              onclick="nextUrl(this, 'type-service', 'private-chef/multiple-service/calendar')">
+      <button
+        id="cooking_classes"
+        class="btn-box u-margin-bottom-small"
+        onclick="nextUrl(this, 'type-service', 'private-chef/multiple-service/calendar')"
+      >
         <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../../assets/icons/sprite.svg#icon-multiple-food"></use>
+          <use
+            xlink:href="../../../assets/icons/sprite.svg#icon-multiple-food"
+          ></use>
         </svg>
         <p>Multiple Services</p>
       </button>

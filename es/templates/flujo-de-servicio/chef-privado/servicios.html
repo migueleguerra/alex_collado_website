@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="../../../../css/style.css">
-    <link rel="shortcut icon" type="image/png" href="../../../../assets/img/favicon-chef.png">
+    <link rel="stylesheet" href="../../../../css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../../../../assets/img/favicon-chef.png"
+    />
 
     <title>Alex Collado &#124; Servicios</title>
   </head>
   <body class="service-flow">
     <div class="timeline">
-      <a href="/es/templates/flujo-de-servicio/donde.html" 
-        class="timeline__link">
+      <a
+        href="/es/templates/flujo-de-servicio/ubicacion.html"
+        class="timeline__link"
+      >
         <svg class="timeline__icon">
-          <use xlink:href="../../../../assets/icons/sprite.svg#icon-placeholder"></use>
+          <use
+            xlink:href="../../../../assets/icons/sprite.svg#icon-placeholder"
+          ></use>
         </svg>
       </a>
-      <svg class="timeline__line" >
+      <svg class="timeline__line">
         <use xlink:href="../../../../assets/icons/sprite.svg#line"></use>
       </svg>
-      <svg class="timeline__icon" style="fill: #F0C824">
-        <use xlink:href="../../../../assets/icons/sprite.svg#icon-service"></use>
+      <svg class="timeline__icon" style="fill: #f0c824">
+        <use
+          xlink:href="../../../../assets/icons/sprite.svg#icon-service"
+        ></use>
       </svg>
     </div>
 
@@ -33,22 +43,33 @@
     </div>
 
     <div class="buttons-box">
-      <button id="private_chef" class="btn-box u-margin-bottom-small"
-              onclick="nextUrl(this, 'type-service', 'chef-privado/servicio-unico/personas')">
+      <button
+        id="private_chef"
+        class="btn-box u-margin-bottom-small"
+        onclick="nextUrl(this, 'type-service', 'chef-privado/servicio-unico/personas')"
+      >
         <svg class="box-icon u-margin-bottom-small">
           <use xlink:href="../../../../assets/icons/sprite.svg#icon-food"></use>
         </svg>
         <p>servicio único</p>
       </button>
-      <button id="cooking_classes" class="btn-box u-margin-bottom-small"
-              onclick="nextUrl(this, 'type-service', 'chef-privado/multi-servicio/calendario')">
+      <button
+        id="cooking_classes"
+        class="btn-box u-margin-bottom-small"
+        onclick="nextUrl(this, 'type-service', 'chef-privado/multi-servicio/calendario')"
+      >
         <svg class="box-icon u-margin-bottom-small">
-          <use xlink:href="../../../../assets/icons/sprite.svg#icon-multiple-food"></use>
+          <use
+            xlink:href="../../../../assets/icons/sprite.svg#icon-multiple-food"
+          ></use>
         </svg>
         <p>servicio multiple</p>
       </button>
     </div>
 
-    <script type="text/javascript" src="../../../../js/service-flow.js"></script>
+    <script
+      type="text/javascript"
+      src="../../../../js/service-flow.js"
+    ></script>
   </body>
 </html>
