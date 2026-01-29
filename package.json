@@ -14,6 +14,9 @@
   },
   "author": "Miguel Guerra",
   "license": "ISC",
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "concat": "^1.0.3",
