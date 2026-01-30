@@ -1177,11 +1177,11 @@ body {
   }
 }
 .gallery--12 {
-  background-image: url(../assets/img/gallery12-x1.jpg);
+  background-image: url(../assets/img/gallery18-x1.jpg);
 }
 @media (min-resolution: 192dpi) and (min-width: 37.5em) {
   .gallery--12 {
-    background-image: url(../assets/img/gallery12-x2.jpg);
+    background-image: url(../assets/img/gallery18-x2.jpg);
   }
 }
 .gallery--13 {
