@@ -1637,3 +1637,17 @@ textarea {
 }
 
 /*# sourceMappingURL=style.comp.css.map */
+
+/* Wizard grid layout */
+.wizard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 50rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .wizard-grid {
+    grid-template-columns: 1fr;
+  }
+}
