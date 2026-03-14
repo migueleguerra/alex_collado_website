@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EMAILJS_USER_ID = process.env.EMAILJS_USER_ID || "user_RjYoUr6zpBN3O4umVqmJ3";
-const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID || "default_service";
+const EMAILJS_USER_ID = process.env.EMAILJS_USER_ID;
+const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
 
 export async function POST(request: NextRequest) {
   try {
+    if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID) {
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { templateId, ...templateParams } = body;
 
