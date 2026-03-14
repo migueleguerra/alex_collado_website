@@ -31,14 +31,8 @@ export default function MultiSelectStep({ stepId, onNext, currentValue }: Props)
   return (
     <div className="buttons" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div
-        style={useGrid ? {
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "2rem",
-          width: "100%",
-          maxWidth: "50rem",
-          marginBottom: "2rem",
-        } : undefined}
+        className={useGrid ? "wizard-grid" : undefined}
+        style={{ marginBottom: "2rem" }}
       >
         {options.map((option, index) => (
           <button

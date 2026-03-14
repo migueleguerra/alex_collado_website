@@ -15,14 +15,7 @@ export default function SingleSelectStep({ stepId, onNext, currentValue }: Props
 
   return (
     <div
-      className="buttons"
-      style={useGrid ? {
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        gap: "2rem",
-        width: "100%",
-        maxWidth: "50rem",
-      } : undefined}
+      className={useGrid ? "wizard-grid" : "buttons"}
     >
       {options.map((option, index) => (
         <button
