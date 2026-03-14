@@ -271,8 +271,8 @@
   "validation": {
     "requiredFields": "Make sure you fill all required input fields.",
     "recaptchaRequired": "Please complete the reCAPTCHA.",
-    "nameInvalid": "Please enter your name.",
-    "emailInvalid": "Please enter a valid email address.",
-    "phoneInvalid": "Please enter a valid phone number."
+    "nameInvalid": "We'd love to know your name!",
+    "emailInvalid": "Hmm, that doesn't look like a valid email.",
+    "phoneInvalid": "We need a phone number to reach you."
   }
 }
