@@ -1,11 +1,14 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { locales } from "@/i18n/config";
 import { Heebo, Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "../globals.css";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const heebo = Heebo({
   subsets: ["latin"],
@@ -35,15 +38,24 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords:
-      "private chef, playa del carmen, tulum, riviera maya, cooking classes, mezcal experience",
+      "Alex Collado, Chef, Private Chef, Cooking Classes, Mezcal Experience, Playa del Carmen, Tulum, Riviera Maya, Puerto Morelos, Mexico",
     authors: [{ name: "Alex Collado" }],
     icons: {
-      icon: "/img/favicons/favicon.ico",
+      icon: "/img/favicon-chef.png",
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: locale === "es" ? "https://www.alexchefco.com.mx/es" : "https://www.alexchefco.com.mx",
+      siteName: "Alex Collado",
+      locale: locale === "es" ? "es_MX" : "en_US",
+      type: "website",
     },
     alternates: {
+      canonical: locale === "es" ? "https://www.alexchefco.com.mx/es" : "https://www.alexchefco.com.mx",
       languages: {
-        en: "/",
-        es: "/es",
+        en: "https://www.alexchefco.com.mx",
+        es: "https://www.alexchefco.com.mx/es",
       },
     },
   };
@@ -66,6 +78,24 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${heebo.variable} ${roboto.variable}`}>
+      <head>
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
+      </head>
       <body className="container" suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
