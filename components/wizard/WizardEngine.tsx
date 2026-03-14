@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
 import { getFlowSteps, stepConfigs, type StepId } from "./config";
 import SingleSelectStep from "./steps/SingleSelectStep";
 import MultiSelectStep from "./steps/MultiSelectStep";
@@ -16,6 +17,7 @@ interface WizardData {
 
 export default function WizardEngine() {
   const t = useTranslations("serviceFlow");
+  const router = useRouter();
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [data, setData] = useState<WizardData>({});
 
@@ -102,33 +104,31 @@ export default function WizardEngine() {
   return (
     <div className="service-flow">
       {/* Back button - top left */}
-      {currentStepIndex > 0 && (
-        <button
-          onClick={handleBack}
-          style={{
-            position: "absolute",
-            top: "3rem",
-            left: "3rem",
-            cursor: "pointer",
-            backgroundColor: "#212021",
-            color: "#ffffff",
-            border: "none",
-            borderRadius: "50%",
-            width: "4.5rem",
-            height: "4.5rem",
-            fontSize: "2rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transition: "all 0.2s",
-            zIndex: 5,
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#444")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#212021")}
-        >
-          ←
-        </button>
-      )}
+      <button
+        onClick={currentStepIndex === 0 ? () => router.push("/") : handleBack}
+        style={{
+          position: "absolute",
+          top: "3rem",
+          left: "3rem",
+          cursor: "pointer",
+          backgroundColor: "#212021",
+          color: "#ffffff",
+          border: "none",
+          borderRadius: "50%",
+          width: "4.5rem",
+          height: "4.5rem",
+          fontSize: "2rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          transition: "all 0.2s",
+          zIndex: 5,
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#444")}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#212021")}
+      >
+        ←
+      </button>
 
       {/* Progress bar */}
       <div style={{ width: "80%", maxWidth: "40rem", marginBottom: "4rem" }}>

@@ -1645,9 +1645,12 @@ textarea {
   gap: 2rem;
   width: 100%;
   max-width: 50rem;
+  padding: 0 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .wizard-grid {
     grid-template-columns: 1fr;
+    max-width: 30rem;
+    margin: 0 auto;
   }
 }
