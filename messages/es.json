@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "title": "Alex Collado | Chef Privado",
+    "description": "Servicio de chef profesional, clases de cocina mexicana y degustación de mezcal"
+  },
+  "nav": {
+    "about": "Acerca de",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "header": {
+    "title": "Chef Alex Collado",
+    "description": "Servicio de chef profesional, clases de cocina mexicana y degustación de mezcal para sus vacaciones y eventos privados en Playa del Carmen, Tulum, Riviera Maya y sus alrededores.",
+    "getService": "cotizar servicio",
+    "contactMe": "contacto",
+    "altChef": "Chef Playa del Carmen"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "intro": "Ofrezco la mejor experiencia culinaria de la ciudad, una breve biografía sobre mí...",
+    "bio": "Nací en Santa Mónica, California, criado en México y Francia. Trabajé en Alemania, Polonia y Estados Unidos, con más de ocho años de experiencia en cocinas profesionales y un restaurante con estrellas Michelin.",
+    "more": "conoce más",
+    "getQuote": "cotizar servicio",
+    "altChefTulum": "Chef Tulum",
+    "altPrivateChef": "Private Chef Playa del Carmen"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "¡Déjame la cocina a mí y disfruta tus vacaciones! Todos mis servicios están personalizados de acuerdo a tus necesidades, yo busco los ingredientes más frescos de la temporada.",
+    "getService": "cotizar servicio",
+    "altImage": "Chef privado Puerto Morelos",
+    "privateChef": {
+      "title": "Chef Privado",
+      "description": "Les preparo cualquiera de las tres comidas del día en su propia casa de vacaciones y me encargo de los alimentos de acuerdo a tus necesidades...",
+      "alt": "Private Chef Playa del Carmen"
+    },
+    "cookingExperience": {
+      "title": "Clases de Cocina",
+      "description": "Aprende conmigo en una clase privada el arte de la cocina mexicana. Entradas, salsas, plato principal y postres...",
+      "alt": "Cooking classes Playa del Carmen"
+    },
+    "mezcalExperience": {
+      "title": "Degustación de Mezcal",
+      "description": "Degustamos diferentes tipos de mezcal en compañía de platillos mexicanos y conocerás acerca de su proceso de elaboración...",
+      "alt": "Mezcal experience in Playa del Carmen"
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Esto es lo que han hablado mis clientes de mi trabajo:",
+    "altTulum": "Private Chef Tulum",
+    "altPlaya": "Private Chef Playa del Carmen",
+    "testimonial1": {
+      "name": "Ambika Kumar Doran",
+      "text": "9 de nosotros alquilamos una casa cerca de Playa del Carmen la última semana de Diciembre y organizamos para que Alex nos cocinara cada una de las 7 noches que estuvimos ahí. Esto hizo que lo que hubieran sido unas vacaciones muy buenas se convirtieran en unas excelentes vacaciones. Todos nosotros provenimos de las principales ciudades de los EE. UU. con numerosos restaurantes galardonados e incluso con estrellas Michelin, por lo que tenemos un punto de referencia bastante bueno...",
+      "more": "más"
+    },
+    "testimonial2": {
+      "name": "Mallory J.",
+      "text": "Alex cocinó para nosotros, un grupo de 8 mientras alquilamos una casa en Playa del Carmen y solo puedo decir suficientes cosas buenas sobre sus servicios. Desde la selección del menú inicial, la presentación de las comidas, Alex fue receptivo y siempre dio un servicio de 5 estrellas. Alex, y Nancy su asistente, también son tan amables y agradables que incluso ofrecieron recoger alimentos para nosotros si necesitábamos algo durante todo el fin de semana. Recomiendo sus servicios, ¡no te decepcionará!"
+    }
+  },
+  "cta": {
+    "heading": "¿Estás listo(a) para una experiencia inolvidable?",
+    "button": "claro",
+    "altImage": "Mezcal Playa del Carmen"
+  },
+  "footer": {
+    "phone1": "+52-984-179-6461",
+    "phone2": "+1-650-862-2105",
+    "email": "alex.chefco@gmail.com",
+    "copyright": "© Copyright 2019 creado por Siria Lerma y <link>Miguel Guerra</link>",
+    "madeBy": "Miguel Guerra",
+    "instagram": "instagram",
+    "medium": "medium",
+    "facebook": "facebook",
+    "whatsapp": "whatsapp"
+  },
+  "popups": {
+    "privateChef": {
+      "title": "Chef Privado",
+      "text": "Déjame a mí el trabajo duro de la cocina mientras tú disfrutas de tus vacaciones en compañía de tus amigos y familiares en la comodidad de tu hogar o alquiler, sin tráfico, sin necesidad de buscar restaurantes o esperar mesa. Crearé un menú de acuerdo a sus necesidades y preferencias utilizando los productos locales más frescos de la temporada. Yo me encargo de comprar los ingredientes, te preparo el menú y te dejamos todo limpio. Los servicios pueden ser por plato, tipo buffet o estilo familiar, ustedes deciden.",
+      "button": "cotizar servicio"
+    },
+    "cookingExperience": {
+      "title": "Clases de Cocina",
+      "text": "¡Aprende el arte de la cocina mexicana! Toca, huele y prueba auténticos ingredientes mexicanos; perfecto para aquellos interesados en la gastronomía mexicana y que quieren aprender a cocinar deliciosos platillos tradicionales. En la comodidad de su hogar o alquiler, llevaré todo lo que vamos a necesitar para hacer una fiesta mexicana. Todos los ingredientes, bebidas alcohólicas y no alcohólicas están incluidos en el precio.",
+      "duration": "de 3-4 horas",
+      "button": "cotizar servicio"
+    },
+    "mezcalExperience": {
+      "title": "Degustación de Mezcal",
+      "text": "En la comodidad de tu hogar o alquiler, degustarás de alrededor de 5 bebidas de mezcal; ya sea en coctelería o solo, combinado con típicos aperitivos mexicanos. Cocinaré alimentos de acuerdo a tus gustos y necesidades, mientras pruebas de los diferentes sabores de esta bebida tradicional.",
+      "duration": "de 2-3 horas",
+      "button": "cotizar servicio"
+    },
+    "aboutMe": {
+      "title": "Alex Collado",
+      "text": "Nací en Santa Mónica, California, en una familia mexicana, luego exploré nuevos países como: México, Francia y China. Mi inspiración culinaria proviene del mundo que me rodea, mezclando tradiciones y sabores mundiales. Al crecer cerca de mi abuela en Tampico, que pertenece a la Huasteca Potosina, experimenté desde el inicio la comida casera y tradicional que preparaba para la familia. Más adelante, decidí estudiar gastronomía en Austin, Texas, lo que me otorgó la experiencia de trabajar más tarde en Berlín, Polonia y en San Francisco; donde tuve la fortuna de trabajar en un restaurante con una estrella Michelin. Todo esto fue excepcionalmente influyente y me llevó a buscar mi propio camino como chef privado en el paradisíaco lugar de la Riviera Maya.",
+      "button": "cotizar servicio",
+      "alt": "Private Chef Playa del Carmen"
+    },
+    "testimonial1Full": {
+      "text": "9 de nosotros alquilamos una casa cerca de Playa del Carmen la última semana de diciembre y organizamos para que Alex nos cocinara cada una de las 7 noches que estuvimos ahí. Esto hizo que lo que hubieran sido unas vacaciones muy buenas se convirtieran en unas excelentes vacaciones. Todos nosotros provenimos de las principales ciudades de los EE. UU. con numerosos restaurantes galardonados e incluso con estrellas Michelin, por lo que tenemos un punto de referencia bastante bueno para lo que es comida de calidad. Cada una de las siete cenas de Alex fue igual a una excelente experiencia gastronómica, pero servida en nuestra propia mesa en casa sin la necesidad de vestirse o salir a un lugar. Él y Nancy trabajaron con anticipación para personalizar un menú que se ajustó a nuestras necesidades e incluso preparó comida vegetariana para algunas noches para dos o tres personas que no querían comer lo que el resto del grupo había elegido. También tuvimos un niño muy particular con una alergia alimentaria grave y Alex hizo todo lo posible para cocinar comidas totalmente separadas para él. Además, se ofreció (y aceptamos) a hacer compras de comestibles para nosotros cuando nos estábamos quedando sin alimentos básicos o incluso cuando decidimos que queríamos algo que no habíamos pensado obtener (como mangos). Pero más que las excelentes cenas y la asistencia en el supermercado fue la sensación de que Alex y Nancy son buenas personas a las que les encanta cocinar para otros. Fueron serviciales, amables, corteses. Las comidas fueron excelentes, las sobras se convirtieron en almuerzos al día siguiente, la comida fue creativa, presentada en formas visualmente interesantes y universalmente deliciosas. Y este fue el juicio colectivo de 9 personas con diferentes gustos. Poder satisfacer a un grupo tan diverso, como el nuestro, es todo un testimonio. No dudaríamos en volver a contratar a Alex e incluso estamos considerando llevarlo a los EE. UU. para uno o dos eventos especiales donde quisiéramos que él cocinara (sinceramente es muy bueno en lo que hace). Contrátalo si puedes, no te arrepentirás."
+    }
+  },
+  "contactForm": {
+    "title": "Contacto",
+    "heading": "¿Qué puedo hacer por ti?",
+    "nameLabel": "Nombre:",
+    "emailLabel": "Correo:",
+    "phoneLabel": "Teléfono:",
+    "messageLabel": "Mensaje:",
+    "namePlaceholder": "Nombre *",
+    "emailPlaceholder": "Correo *",
+    "phonePlaceholder": "Teléfono *",
+    "messagePlaceholder": "Mensaje",
+    "submit": "enviar"
+  },
+  "success": {
+    "title": "Éxito",
+    "heading": "Mensaje Recibido. Gracias!",
+    "message": "Te contactaré lo antes posible.",
+    "button": "Página principal"
+  },
+  "error": {
+    "title": "Error",
+    "heading": "Ups... ¡Algo salió mal!",
+    "message": "Inténtelo más tarde.",
+    "button": "página principal",
+    "altImage": "Error image"
+  },
+  "serviceFlow": {
+    "where": {
+      "title": "Donde",
+      "heading": "¿En donde necesitas el servicio?",
+      "options": [
+        "Cancún",
+        "Playa del Carmen",
+        "Puerto Morelos",
+        "Puerto Aventuras",
+        "Akumal",
+        "Tulum",
+        "Otro lugar"
+      ]
+    },
+    "what": {
+      "title": "Servicio",
+      "heading": "¿Qué servicio necesitas?",
+      "options": [
+        "Chef Privado",
+        "Clases de Cocina",
+        "Degustación de Mezcal"
+      ]
+    },
+    "typeService": {
+      "title": "Servicios",
+      "heading": "Necesito un chef para:",
+      "options": [
+        "Servicio único",
+        "Servicio múltiple"
+      ]
+    },
+    "howMany": {
+      "title": "Personas",
+      "heading": "¿Cuántas personas son?",
+      "adults": "ADULTOS",
+      "children": "NIÑOS (menor a 12)",
+      "continue": "Siguiente"
+    },
+    "meal": {
+      "title": "Comida",
+      "heading": "El servicio será para:",
+      "options": [
+        "Desayuno",
+        "Comida",
+        "Cena",
+        "Todavía no lo sé"
+      ]
+    },
+    "food": {
+      "title": "Alimentos",
+      "heading": "¿Qué te gustaría que cocine?",
+      "options": [
+        "Mexicano",
+        "Americano",
+        "Fusión",
+        "Mariscos",
+        "Cortes",
+        "Elige tú"
+      ],
+      "placeholder": "¿Otras sugerencias?",
+      "continue": "Siguiente"
+    },
+    "stove": {
+      "title": "Estufa",
+      "heading": "Tu estufa es:",
+      "options": [
+        "Gas",
+        "Eléctrica",
+        "Inducción",
+        "No lo sé"
+      ]
+    },
+    "hobs": {
+      "title": "Quemadores",
+      "heading": "La estufa tiene:",
+      "options": [
+        "1 - 2 quemadores",
+        "3 - 4 quemadores",
+        "No lo sé"
+      ]
+    },
+    "oven": {
+      "title": "Horno",
+      "heading": "¿Tienes horno?",
+      "options": [
+        "Sí",
+        "No",
+        "No lo sé"
+      ]
+    },
+    "calendar": {
+      "title": "Calendario",
+      "heading": "¿Cuándo necesitas el servicio?",
+      "placeholder": "mm/dd/yyyy",
+      "continue": "Siguiente"
+    },
+    "calendarRange": {
+      "title": "Calendario",
+      "heading": "¿Cuándo necesitas el servicio?",
+      "from": "Desde:",
+      "to": "Hasta:",
+      "placeholder": "mm/dd/yyyy",
+      "continue": "Siguiente"
+    },
+    "allergies": {
+      "title": "Alergias",
+      "heading": "¿Tienen alguna alergia, restricción o requisitos especiales?",
+      "options": [
+        "Vegano",
+        "Sin gluten",
+        "Sin mariscos",
+        "Sin nueces",
+        "Sin lácteos"
+      ],
+      "placeholder": "¿Otro requisito?",
+      "continue": "Siguiente"
+    },
+    "contact": {
+      "heading": "¿Cómo te puedo contactar?",
+      "nameLabel": "Nombre:",
+      "emailLabel": "Correo:",
+      "phoneLabel": "Teléfono:",
+      "messageLabel": "Mensaje:",
+      "namePlaceholder": "Nombre *",
+      "emailPlaceholder": "Correo *",
+      "phonePlaceholder": "Teléfono *",
+      "messagePlaceholder": "Mensaje",
+      "submit": "enviar"
+    }
+  },
+  "common": {
+    "continue": "Siguiente",
+    "send": "enviar",
+    "close": "×"
+  },
+  "validation": {
+    "requiredFields": "Asegúrate de llenar todos los campos requeridos.",
+    "recaptchaRequired": "Por favor completa el reCAPTCHA.",
+    "nameInvalid": "¡Nos encantaría saber tu nombre!",
+    "emailInvalid": "Hmm, eso no parece ser un correo válido.",
+    "phoneInvalid": "Necesitamos un teléfono para contactarte."
+  }
+}

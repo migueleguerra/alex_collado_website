@@ -4,29 +4,34 @@
   "description": "Chef Alex Collado personal website",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass sass/main.sass css/style.css --watch",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "sass sass/main.sass css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed --no-source-map",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
   },
   "author": "Miguel Guerra",
   "license": "ISC",
   "engines": {
-    "node": "24.x"
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "next": "^15.3.0",
+    "next-intl": "^4.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-international-phone": "^4.8.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "concat": "^1.0.3",
-    "live-server": "^1.2.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^11.0.0",
-    "sass": "^1.77.0"
-  },
-  "overrides": {
-    "braces": "^3.0.3",
-    "micromatch": "^4.0.8"
+    "@playwright/test": "^1.58.2",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/react-google-recaptcha": "^2.1.9",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
   }
 }
