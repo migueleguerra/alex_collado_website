@@ -11,14 +11,24 @@ export default function SingleSelectStep({ stepId, onNext, currentValue }: Props
   const t = useTranslations("serviceFlow");
   const options = t.raw(`${stepId}.options`) as string[];
 
+  const useGrid = options.length >= 4;
+
   return (
-    <div className="buttons">
+    <div
+      className="buttons"
+      style={useGrid ? {
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "2rem",
+        width: "100%",
+        maxWidth: "50rem",
+      } : undefined}
+    >
       {options.map((option, index) => (
         <button
           key={index}
-          className={`btn btn--primary u-margin-bottom-small${currentValue === index ? " btn--selected" : ""}`}
+          className="btn btn--primary u-margin-bottom-small"
           onClick={() => onNext(stepId, index)}
-          style={{ cursor: "pointer", display: "block", width: "100%", maxWidth: "40rem", margin: "0 auto 2rem" }}
         >
           {option}
         </button>

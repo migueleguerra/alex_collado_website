@@ -101,17 +101,55 @@ export default function WizardEngine() {
 
   return (
     <div className="service-flow">
+      {/* Back button - top left */}
+      {currentStepIndex > 0 && (
+        <button
+          onClick={handleBack}
+          style={{
+            position: "absolute",
+            top: "3rem",
+            left: "3rem",
+            cursor: "pointer",
+            backgroundColor: "#212021",
+            color: "#ffffff",
+            border: "none",
+            borderRadius: "50%",
+            width: "4.5rem",
+            height: "4.5rem",
+            fontSize: "2rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "all 0.2s",
+            zIndex: 5,
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#444")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#212021")}
+        >
+          ←
+        </button>
+      )}
+
       {/* Progress bar */}
-      <div className="timeline">
+      <div style={{ width: "80%", maxWidth: "40rem", marginBottom: "4rem" }}>
         <div
           style={{
-            width: `${progress}%`,
+            width: "100%",
             height: "4px",
-            backgroundColor: "#F0C824",
-            transition: "width 0.3s ease",
+            backgroundColor: "rgba(0,0,0,0.1)",
             borderRadius: "2px",
           }}
-        />
+        >
+          <div
+            style={{
+              width: `${progress}%`,
+              height: "4px",
+              backgroundColor: "#F0C824",
+              transition: "width 0.3s ease",
+              borderRadius: "2px",
+            }}
+          />
+        </div>
       </div>
 
       {/* Step heading */}
@@ -120,19 +158,6 @@ export default function WizardEngine() {
           {t(`${config.translationKey}.heading`)}
         </h3>
       </div>
-
-      {/* Back button */}
-      {currentStepIndex > 0 && (
-        <div style={{ marginBottom: "2rem" }}>
-          <button
-            onClick={handleBack}
-            className="btn btn--secondary"
-            style={{ cursor: "pointer" }}
-          >
-            ←
-          </button>
-        </div>
-      )}
 
       {/* Current step */}
       {renderStep()}

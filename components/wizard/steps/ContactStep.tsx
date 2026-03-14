@@ -30,15 +30,6 @@ export default function ContactStep({ wizardData }: Props) {
 
     setStatus("sending");
 
-    const formData = new FormData();
-    formData.append("service_id", "default_service");
-    formData.append("template_id", "template_services");
-    formData.append("user_id", "user_RjYoUr6zpBN3O4umVqmJ3");
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("phone", phone);
-    formData.append("message", message);
-
     const resolveValue = (key: string, value: unknown): string => {
       if (value === null || value === undefined) return "";
       if (typeof value === "number") {
@@ -53,49 +44,59 @@ export default function ContactStep({ wizardData }: Props) {
       return String(value);
     };
 
-    if (wizardData.where !== undefined) formData.append("where", resolveValue("where", wizardData.where));
-    if (wizardData.what !== undefined) formData.append("what", resolveValue("what", wizardData.what));
-    if (wizardData.typeService !== undefined) formData.append("typeService", resolveValue("typeService", wizardData.typeService));
+    // Build template params
+    const templateParams: Record<string, string> = {
+      name,
+      email,
+      phone,
+      message,
+    };
+
+    if (wizardData.where !== undefined) templateParams.where = resolveValue("where", wizardData.where);
+    if (wizardData.what !== undefined) templateParams.what = resolveValue("what", wizardData.what);
+    if (wizardData.typeService !== undefined) templateParams.typeService = resolveValue("typeService", wizardData.typeService);
 
     const howMany = wizardData.howMany as { adults?: number; children?: number } | undefined;
     if (howMany) {
-      formData.append("adults", String(howMany.adults || 0));
-      formData.append("children", String(howMany.children || 0));
+      templateParams.adults = String(howMany.adults || 0);
+      templateParams.children = String(howMany.children || 0);
     }
 
-    if (wizardData.meal !== undefined) formData.append("meal", resolveValue("meal", wizardData.meal));
+    if (wizardData.meal !== undefined) templateParams.meal = resolveValue("meal", wizardData.meal);
 
     const food = wizardData.food as { selected?: number[]; message?: string } | undefined;
     if (food) {
       const foodOptions = t.raw("food.options") as string[];
-      const selectedFoods = (food.selected || []).map(i => foodOptions[i] || "").join(", ");
-      formData.append("selectedFood", selectedFoods);
-      formData.append("foodMessage", food.message || "");
+      templateParams.selectedFood = (food.selected || []).map(i => foodOptions[i] || "").join(", ");
+      templateParams.foodMessage = food.message || "";
     }
 
-    if (wizardData.stove !== undefined) formData.append("stove", resolveValue("stove", wizardData.stove));
-    if (wizardData.hobs !== undefined) formData.append("hobs", resolveValue("hobs", wizardData.hobs));
-    if (wizardData.oven !== undefined) formData.append("oven", resolveValue("oven", wizardData.oven));
+    if (wizardData.stove !== undefined) templateParams.stove = resolveValue("stove", wizardData.stove);
+    if (wizardData.hobs !== undefined) templateParams.hobs = resolveValue("hobs", wizardData.hobs);
+    if (wizardData.oven !== undefined) templateParams.oven = resolveValue("oven", wizardData.oven);
 
-    if (wizardData.calendar) formData.append("oneServiceDate", String(wizardData.calendar));
+    if (wizardData.calendar) templateParams.oneServiceDate = String(wizardData.calendar);
     if (wizardData.calendarRange) {
       const range = wizardData.calendarRange as { from: string; to: string };
-      formData.append("fromDate", range.from);
-      formData.append("toDate", range.to);
+      templateParams.fromDate = range.from;
+      templateParams.toDate = range.to;
     }
 
     const allergies = wizardData.allergies as { selected?: number[]; message?: string } | undefined;
     if (allergies) {
       const allergyOptions = t.raw("allergies.options") as string[];
-      const selectedAllergies = (allergies.selected || []).map(i => allergyOptions[i] || "").join(", ");
-      formData.append("selectedAllergies", selectedAllergies);
-      formData.append("allergiesMessage", allergies.message || "");
+      templateParams.selectedAllergies = (allergies.selected || []).map(i => allergyOptions[i] || "").join(", ");
+      templateParams.allergiesMessage = allergies.message || "";
     }
 
     try {
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
+      const res = await fetch("/api/send-email", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          templateId: "template_services",
+          ...templateParams,
+        }),
       });
       if (res.ok) {
         setStatus("success");
@@ -129,8 +130,51 @@ export default function ContactStep({ wizardData }: Props) {
     );
   }
 
+  const resolveDisplay = (key: string, value: unknown): string => {
+    if (value === null || value === undefined) return "";
+    if (typeof value === "number") {
+      try {
+        const options = t.raw(`${key}.options`) as string[];
+        return options[value] || String(value);
+      } catch {
+        return String(value);
+      }
+    }
+    if (typeof value === "object" && value !== null) {
+      const obj = value as Record<string, unknown>;
+      if ("adults" in obj) return `${obj.adults} adults, ${obj.children} children`;
+      if ("from" in obj) return `${obj.from} → ${obj.to}`;
+      if ("selected" in obj) {
+        try {
+          const options = t.raw(`${key}.options`) as string[];
+          const selected = (obj.selected as number[]).map(i => options[i]).join(", ");
+          const msg = obj.message ? ` | ${obj.message}` : "";
+          return selected + msg;
+        } catch {
+          return JSON.stringify(value);
+        }
+      }
+    }
+    return String(value);
+  };
+
+  const summaryKeys = Object.keys(wizardData).filter(k => wizardData[k] !== undefined);
+
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", width: "100%", maxWidth: "50rem", margin: "0 auto" }}>
+      {/* Selection summary */}
+      {summaryKeys.length > 0 && (
+        <div style={{ width: "100%", backgroundColor: "#f9f9f9", borderRadius: "2rem", padding: "2rem 3rem", marginBottom: "1rem" }}>
+          <p style={{ fontSize: "1.4rem", fontWeight: "bold", marginBottom: "1rem", color: "#212021", letterSpacing: "1px" }}>YOUR SELECTIONS</p>
+          {summaryKeys.map(key => (
+            <div key={key} style={{ display: "flex", justifyContent: "space-between", fontSize: "1.4rem", padding: "0.5rem 0", borderBottom: "1px solid rgba(0,0,0,0.05)" }}>
+              <span style={{ color: "#888", textTransform: "capitalize" }}>{key.replace(/([A-Z])/g, " $1")}</span>
+              <span style={{ fontWeight: "500", color: "#212021" }}>{resolveDisplay(key, wizardData[key])}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
       {errorMsg && (
         <div style={{ backgroundColor: "#ff7730", color: "white", padding: "1rem 2rem", borderRadius: "1rem", width: "100%" }}>
           {errorMsg}

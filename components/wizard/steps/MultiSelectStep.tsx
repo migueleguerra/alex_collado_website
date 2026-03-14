@@ -26,36 +26,43 @@ export default function MultiSelectStep({ stepId, onNext, currentValue }: Props)
     );
   };
 
+  const useGrid = options.length >= 4;
+
   return (
-    <div className="buttons">
-      {options.map((option, index) => (
-        <button
-          key={index}
-          className="btn btn--primary u-margin-bottom-small"
-          onClick={() => toggle(index)}
-          style={{
-            cursor: "pointer",
-            display: "block",
-            width: "100%",
-            maxWidth: "40rem",
-            margin: "0 auto 2rem",
-            backgroundColor: selected.includes(index) ? "#ff7730" : "#FCDE61",
-          }}
-        >
-          {option}
-        </button>
-      ))}
+    <div className="buttons" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div
+        style={useGrid ? {
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "2rem",
+          width: "100%",
+          maxWidth: "50rem",
+          marginBottom: "2rem",
+        } : undefined}
+      >
+        {options.map((option, index) => (
+          <button
+            key={index}
+            className="btn btn--primary u-margin-bottom-small"
+            onClick={() => toggle(index)}
+            style={{
+              backgroundColor: selected.includes(index) ? "#ff7730" : "#FCDE61",
+            }}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
       <textarea
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder={t(`${stepId}.placeholder`)}
         className="form__input"
-        style={{ display: "block", width: "100%", maxWidth: "40rem", margin: "2rem auto", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontFamily: "inherit", fontSize: "1.6rem", minHeight: "8rem" }}
+        style={{ maxWidth: "50rem", width: "100%", margin: "2rem 0", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontFamily: "inherit", fontSize: "1.6rem", minHeight: "8rem" }}
       />
       <button
         onClick={() => onNext(stepId, { selected, message })}
         className="btn btn--primary"
-        style={{ cursor: "pointer", display: "block", margin: "0 auto" }}
       >
         {t(`${stepId}.continue`)}
       </button>
