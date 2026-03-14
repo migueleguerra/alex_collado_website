@@ -133,13 +133,17 @@ export default function ContactStep({ wizardData }: Props) {
     }
 
     try {
-      const res = await fetch("/api/send-email", {
+      const formData = new FormData();
+      formData.append("service_id", "default_service");
+      formData.append("template_id", "template_services");
+      formData.append("user_id", process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "");
+      Object.entries(templateParams).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          templateId: "template_services",
-          ...templateParams,
-        }),
+        body: formData,
       });
       if (res.ok) {
         setStatus("success");

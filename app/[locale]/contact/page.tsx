@@ -70,16 +70,18 @@ export default function ContactPage() {
     setStatus("sending");
 
     try {
-      const res = await fetch("/api/send-email", {
+      const formData = new FormData();
+      formData.append("service_id", "default_service");
+      formData.append("template_id", "template_contact");
+      formData.append("user_id", process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "");
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("message", message);
+
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send-form", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          templateId: "template_contact",
-          name,
-          email,
-          phone,
-          message,
-        }),
+        body: formData,
       });
       setStatus(res.ok ? "success" : "error");
     } catch {
