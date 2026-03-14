@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import { PhoneInput } from "react-international-phone";
+import { PhoneNumberUtil } from "react-international-phone";
+import "react-international-phone/style.css";
 
 interface Props {
   wizardData: Record<string, unknown>;
@@ -16,7 +17,7 @@ export default function ContactStep({ wizardData }: Props) {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState<string | undefined>("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [touched, setTouched] = useState<Record<string, boolean>>({});
@@ -24,16 +25,23 @@ export default function ContactStep({ wizardData }: Props) {
   const validators = {
     name: (v: string) => v.trim().length >= 2,
     email: (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-    phone: (v: string) => !!v && isValidPhoneNumber(v),
+    phone: (v: string) => {
+      try {
+        const phoneUtil = PhoneNumberUtil.getInstance();
+        return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(v));
+      } catch {
+        return false;
+      }
+    },
   };
 
   const errors = {
     name: touched.name && !validators.name(name),
     email: touched.email && !validators.email(email),
-    phone: touched.phone && !validators.phone(phone || ""),
+    phone: touched.phone && !validators.phone(phone),
   };
 
-  const isValid = validators.name(name) && validators.email(email) && validators.phone(phone || "");
+  const isValid = validators.name(name) && validators.email(email) && validators.phone(phone);
 
   const blur = (field: string) => setTouched(prev => ({ ...prev, [field]: true }));
 
@@ -238,18 +246,29 @@ export default function ContactStep({ wizardData }: Props) {
       <div style={{ width: "100%" }}>
         <label className="form__label" style={{ display: "block", marginBottom: "0.5rem", fontSize: "1.6rem" }}>{t("contact.phoneLabel")}</label>
         <PhoneInput
-          international
-          defaultCountry="MX"
+          defaultCountry="mx"
           value={phone}
-          onChange={(val) => setPhone(val || "")}
+          onChange={(val) => setPhone(val)}
           onBlur={() => blur("phone")}
-          style={{
-            padding: "1rem 1.5rem",
-            borderRadius: "2rem",
+          inputStyle={{
+            width: "100%",
+            padding: "1.5rem",
+            borderRadius: "0 2rem 2rem 0",
             border: `2px solid ${errors.phone ? "#ff7730" : "rgba(0,0,0,0.15)"}`,
+            borderLeft: "none",
             fontSize: "1.6rem",
             fontFamily: "inherit",
+            outline: "none",
             transition: "border-color 0.2s",
+          }}
+          countrySelectorStyleProps={{
+            buttonStyle: {
+              padding: "1.5rem",
+              borderRadius: "2rem 0 0 2rem",
+              border: `2px solid ${errors.phone ? "#ff7730" : "rgba(0,0,0,0.15)"}`,
+              borderRight: "none",
+              transition: "border-color 0.2s",
+            },
           }}
         />
         {errors.phone && <p style={errorStyle}>{tValidation("phoneInvalid")}</p>}
