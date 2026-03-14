@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function AboutMe() {
   const t = useTranslations("about");
@@ -31,9 +32,9 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="about-me__text-container--button">
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {t("getQuote")}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="about-me__img-container">
@@ -69,9 +70,9 @@ export default function AboutMe() {
             <p className="popup__text u-margin-bottom-big">
               {popupsT("aboutMe.text")}
             </p>
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {popupsT("aboutMe.button")}
-            </a>
+            </Link>
           </div>
           <div className="popup__right">
             <picture>

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Hero() {
   const t = useTranslations("header");
@@ -15,9 +16,9 @@ export default function Hero() {
             {t("description")}
           </p>
           <div className="header__text-container--buttons">
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {t("getService")}
-            </a>
+            </Link>
             <a href="#section-form" className="btn btn--secondary btn-contact">
               {t("contactMe")}
             </a>

@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 export default function Testimonials() {
   const t = useTranslations("testimonials");
   const popupsT = useTranslations("popups");
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -44,9 +48,13 @@ export default function Testimonials() {
               {t("testimonial1.text")}
             </p>
             <div className="testimonials__card--btn btn-wrapper">
-              <a href="#popup-testimonial-1" className="btn-line">
+              <button
+                onClick={() => setIsOpen(true)}
+                className="btn-line"
+                style={{ cursor: "pointer", background: "none", border: "none", font: "inherit" }}
+              >
                 {t("testimonial1.more")}
-              </a>
+              </button>
             </div>
           </div>
 
@@ -69,15 +77,55 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Testimonial Popup */}
-      <div className="popup" id="popup-testimonial-1">
-        <div className="popup__container popup__container--testimonials">
-          <a href="#section-testimonials" className="popup__close">
-            &times;
-          </a>
-          <p>{popupsT("testimonial1Full.text")}</p>
+      {/* Testimonial Modal */}
+      {isOpen && (
+        <div
+          className="popup"
+          style={{
+            display: "flex",
+            opacity: 1,
+            visibility: "visible",
+            position: "fixed",
+            top: 0,
+            left: 0,
+          }}
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="popup__container popup__container--testimonials"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              opacity: 1,
+              maxHeight: "80vh",
+              overflowY: "auto",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="popup__close"
+              onClick={() => setIsOpen(false)}
+              style={{
+                cursor: "pointer",
+                background: "none",
+                border: "none",
+                color: "#212021",
+                position: "absolute",
+                top: "2rem",
+                right: "2rem",
+                fontSize: "4rem",
+                lineHeight: 1,
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#F0C824")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#212021")}
+            >
+              &times;
+            </button>
+            <p>{popupsT("testimonial1Full.text")}</p>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

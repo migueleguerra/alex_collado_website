@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Services() {
   const t = useTranslations("services");
@@ -7,20 +8,12 @@ export default function Services() {
   return (
     <>
       <section id="section-service" className="services">
-        <picture>
-          <source srcSet="/img/plate2-x2.jp2" type="image/jp2" />
-          <img
-            src="/img/plate2-x2.png"
-            alt={t("altImage")}
-            className="services__plate"
-          />
-        </picture>
         <div className="services__title">
           <img src="/img/title_line.png" alt={t("altImage")} />
           <h2 className="heading--2 u-margin-bottom-small">{t("title")}</h2>
           <p className="paragraph-1 u-margin-bottom-big">{t("subtitle")}</p>
         </div>
-        <div className="services__cards">
+        <div className="services__cards u-margin-bottom-medium">
           {/* Private Chef */}
           <a
             href="#popup-private-chef"
@@ -125,9 +118,9 @@ export default function Services() {
           </a>
         </div>
         <div className="services__button">
-          <a href="#section-service" className="btn btn--primary">
+          <Link href="/service" className="btn btn--primary">
             {t("getService")}
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -144,9 +137,9 @@ export default function Services() {
             <p className="popup__text paragraph-1 u-margin-bottom-big">
               {popupsT("privateChef.text")}
             </p>
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {popupsT("privateChef.button")}
-            </a>
+            </Link>
           </div>
           <div className="popup__right">
             <div className="popup__right--container">
@@ -175,9 +168,9 @@ export default function Services() {
             <p className="paragraph-1--tertiary u-margin-bottom-big">
               {popupsT("cookingExperience.duration")}
             </p>
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {popupsT("cookingExperience.button")}
-            </a>
+            </Link>
           </div>
           <div className="popup__right">
             <div className="popup__right--container">
@@ -206,9 +199,9 @@ export default function Services() {
             <p className="paragraph-1--tertiary u-margin-bottom-big">
               {popupsT("mezcalExperience.duration")}
             </p>
-            <a href="#section-service" className="btn btn--primary">
+            <Link href="/service" className="btn btn--primary">
               {popupsT("mezcalExperience.button")}
-            </a>
+            </Link>
           </div>
           <div className="popup__right">
             <div className="popup__right--container">

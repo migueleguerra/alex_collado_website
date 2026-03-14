@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function CallToAction() {
   const t = useTranslations("cta");
@@ -15,9 +16,9 @@ export default function CallToAction() {
           />
         </picture>
         <h2 className="heading--3 u-margin-bottom-medium">{t("heading")}</h2>
-        <a href="#section-service" className="btn btn--primary">
+        <Link href="/service" className="btn btn--primary">
           {t("button")}
-        </a>
+        </Link>
       </div>
     </section>
   );
