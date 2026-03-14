@@ -204,7 +204,7 @@ export default function ContactStep({ wizardData }: Props) {
   const summaryKeys = Object.keys(wizardData).filter(k => wizardData[k] !== undefined);
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", width: "100%", maxWidth: "50rem", margin: "0 auto" }}>
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", width: "100%", maxWidth: "50rem", margin: "0 auto", padding: "0 3rem" }}>
       {/* Selection summary */}
       {summaryKeys.length > 0 && (
         <div style={{ width: "100%", backgroundColor: "#f9f9f9", borderRadius: "2rem", padding: "2rem 3rem", marginBottom: "1rem" }}>
