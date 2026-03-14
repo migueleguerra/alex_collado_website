@@ -2,16 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 
 const EMAILJS_USER_ID = process.env.EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
+const TEST_MODE = process.env.EMAIL_TEST_MODE === "true";
 
 export async function POST(request: NextRequest) {
   try {
-    if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID) {
-      return NextResponse.json(
-        { error: "Email service is not configured." },
-        { status: 500 }
-      );
-    }
-
     const body = await request.json();
     const { templateId, ...templateParams } = body;
 
@@ -19,6 +13,25 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Name, email, and phone are required." },
         { status: 400 }
+      );
+    }
+
+    // Test mode: log email data and return success without sending
+    if (TEST_MODE) {
+      console.log("\n📧 [TEST MODE] Email would be sent:");
+      console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+      console.log("Template:", templateId || "template_services");
+      Object.entries(templateParams).forEach(([key, value]) => {
+        console.log(`  ${key}: ${value}`);
+      });
+      console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+      return NextResponse.json({ success: true, testMode: true, data: templateParams });
+    }
+
+    if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID) {
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 500 }
       );
     }
 

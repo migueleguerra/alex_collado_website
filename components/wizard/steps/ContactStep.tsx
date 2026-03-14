@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { PhoneInput } from "react-international-phone";
-import { PhoneNumberUtil } from "react-international-phone";
 import "react-international-phone/style.css";
 
 interface Props {
@@ -26,12 +25,8 @@ export default function ContactStep({ wizardData }: Props) {
     name: (v: string) => v.trim().length >= 2,
     email: (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
     phone: (v: string) => {
-      try {
-        const phoneUtil = PhoneNumberUtil.getInstance();
-        return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(v));
-      } catch {
-        return false;
-      }
+      const digits = v.replace(/\D/g, "");
+      return digits.length >= 10 && digits.length <= 15;
     },
   };
 
