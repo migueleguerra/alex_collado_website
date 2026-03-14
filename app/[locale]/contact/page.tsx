@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { Link } from "@/i18n/navigation";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+const IS_TEST_MODE = process.env.NEXT_PUBLIC_EMAIL_TEST_MODE === "true";
+const SHOW_RECAPTCHA = RECAPTCHA_SITE_KEY && !IS_TEST_MODE;
 
 export default function ContactPage() {
   const t = useTranslations("contactForm");
@@ -18,6 +23,8 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const validators = {
     name: (v: string) => v.trim().length >= 2,
@@ -34,7 +41,7 @@ export default function ContactPage() {
     phone: touched.phone && !validators.phone(phone),
   };
 
-  const isValid = validators.name(name) && validators.email(email) && validators.phone(phone);
+  const isValid = validators.name(name) && validators.email(email) && validators.phone(phone) && (!SHOW_RECAPTCHA || !!captchaToken);
   const blur = (field: string) => setTouched((prev) => ({ ...prev, [field]: true }));
 
   const inputStyle = (hasError: boolean): React.CSSProperties => ({
@@ -175,6 +182,17 @@ export default function ContactPage() {
             style={{ ...inputStyle(false), minHeight: "10rem" }}
           />
         </div>
+
+        {SHOW_RECAPTCHA && (
+          <div style={{ marginTop: "1rem" }}>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={RECAPTCHA_SITE_KEY!}
+              onChange={(token) => setCaptchaToken(token)}
+              onExpired={() => setCaptchaToken(null)}
+            />
+          </div>
+        )}
 
         <button
           type="submit"
