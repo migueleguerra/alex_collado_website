@@ -15,7 +15,8 @@ export default function Services() {
             className="services__plate"
           />
         </picture>
-        <div className="services__text-container">
+        <div className="services__title">
+          <img src="/img/title_line.png" alt={t("altImage")} />
           <h2 className="heading--2 u-margin-bottom-small">{t("title")}</h2>
           <p className="paragraph-1 u-margin-bottom-big">{t("subtitle")}</p>
         </div>

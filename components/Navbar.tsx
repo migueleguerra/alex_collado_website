@@ -65,22 +65,27 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav__languages">
-            <Link
-              href={pathname}
-              locale="en"
-              className={`nav__link${locale === "en" ? " nav__link--selected" : ""}`}
-              onClick={closeMenu}
-            >
-              {t("english")}
-            </Link>
-            <Link
-              href={pathname}
-              locale="es"
-              className={`nav__link${locale === "es" ? " nav__link--selected" : ""}`}
-              onClick={closeMenu}
-            >
-              {t("spanish")}
-            </Link>
+            <div className="nav__language">
+              <Link
+                href={pathname}
+                locale="en"
+                className={`nav__link nav__link--lang${locale === "en" ? " nav__link--selected" : ""}`}
+                onClick={closeMenu}
+              >
+                {t("english")}
+              </Link>
+            </div>
+            <div className="nav__bar">|</div>
+            <div className="nav__language">
+              <Link
+                href={pathname}
+                locale="es"
+                className={`nav__link nav__link--lang${locale === "es" ? " nav__link--selected" : ""}`}
+                onClick={closeMenu}
+              >
+                {t("spanish")}
+              </Link>
+            </div>
           </li>
         </ul>
       </div>
