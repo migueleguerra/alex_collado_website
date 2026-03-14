@@ -270,6 +270,9 @@
   },
   "validation": {
     "requiredFields": "Make sure you fill all required input fields.",
-    "recaptchaRequired": "Please complete the reCAPTCHA."
+    "recaptchaRequired": "Please complete the reCAPTCHA.",
+    "nameInvalid": "Please enter your name.",
+    "emailInvalid": "Please enter a valid email address.",
+    "phoneInvalid": "Please enter a valid phone number."
   }
 }

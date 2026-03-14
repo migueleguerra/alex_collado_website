@@ -17,16 +17,47 @@ export default function ContactStep({ wizardData }: Props) {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
+  const validators = {
+    name: (v: string) => v.trim().length >= 2,
+    email: (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+    phone: (v: string) => /^[+]?[\d\s()-]{7,}$/.test(v.trim()),
+  };
+
+  const errors = {
+    name: touched.name && !validators.name(name),
+    email: touched.email && !validators.email(email),
+    phone: touched.phone && !validators.phone(phone),
+  };
+
+  const isValid = validators.name(name) && validators.email(email) && validators.phone(phone);
+
+  const blur = (field: string) => setTouched(prev => ({ ...prev, [field]: true }));
+
+  const inputStyle = (hasError: boolean): React.CSSProperties => ({
+    width: "100%",
+    padding: "1.5rem",
+    borderRadius: "2rem",
+    border: `2px solid ${hasError ? "#ff7730" : "rgba(0,0,0,0.15)"}`,
+    fontSize: "1.6rem",
+    fontFamily: "inherit",
+    outline: "none",
+    transition: "border-color 0.2s",
+  });
+
+  const errorStyle: React.CSSProperties = {
+    color: "#ff7730",
+    fontSize: "1.2rem",
+    marginTop: "0.5rem",
+    paddingLeft: "1.5rem",
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setTouched({ name: true, email: true, phone: true });
 
-    if (!name || !email || !phone) {
-      setErrorMsg(tValidation("requiredFields"));
-      setTimeout(() => setErrorMsg(""), 5000);
-      return;
-    }
+    if (!isValid) return;
 
     setStatus("sending");
 
@@ -175,22 +206,18 @@ export default function ContactStep({ wizardData }: Props) {
         </div>
       )}
 
-      {errorMsg && (
-        <div style={{ backgroundColor: "#ff7730", color: "white", padding: "1rem 2rem", borderRadius: "1rem", width: "100%" }}>
-          {errorMsg}
-        </div>
-      )}
-
+      {/* Form fields */}
       <div style={{ width: "100%" }}>
         <label className="form__label" style={{ display: "block", marginBottom: "0.5rem", fontSize: "1.6rem" }}>{t("contact.nameLabel")}</label>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          onBlur={() => blur("name")}
           placeholder={t("contact.namePlaceholder")}
-          className="form__input"
-          style={{ width: "100%", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontSize: "1.6rem", fontFamily: "inherit" }}
+          style={inputStyle(!!errors.name)}
         />
+        {errors.name && <p style={errorStyle}>{tValidation("nameInvalid")}</p>}
       </div>
 
       <div style={{ width: "100%" }}>
@@ -199,10 +226,11 @@ export default function ContactStep({ wizardData }: Props) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onBlur={() => blur("email")}
           placeholder={t("contact.emailPlaceholder")}
-          className="form__input"
-          style={{ width: "100%", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontSize: "1.6rem", fontFamily: "inherit" }}
+          style={inputStyle(!!errors.email)}
         />
+        {errors.email && <p style={errorStyle}>{tValidation("emailInvalid")}</p>}
       </div>
 
       <div style={{ width: "100%" }}>
@@ -211,10 +239,11 @@ export default function ContactStep({ wizardData }: Props) {
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          onBlur={() => blur("phone")}
           placeholder={t("contact.phonePlaceholder")}
-          className="form__input"
-          style={{ width: "100%", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontSize: "1.6rem", fontFamily: "inherit" }}
+          style={inputStyle(!!errors.phone)}
         />
+        {errors.phone && <p style={errorStyle}>{tValidation("phoneInvalid")}</p>}
       </div>
 
       <div style={{ width: "100%" }}>
@@ -223,15 +252,14 @@ export default function ContactStep({ wizardData }: Props) {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={t("contact.messagePlaceholder")}
-          className="form__input"
-          style={{ width: "100%", padding: "1.5rem", borderRadius: "2rem", border: "1px solid rgba(0,0,0,0.4)", fontSize: "1.6rem", fontFamily: "inherit", minHeight: "10rem" }}
+          style={{ ...inputStyle(false), minHeight: "10rem" }}
         />
       </div>
 
       <button
         type="submit"
         className="btn btn--primary"
-        style={{ cursor: "pointer", marginTop: "2rem" }}
+        style={{ cursor: isValid ? "pointer" : "not-allowed", marginTop: "2rem", opacity: isValid ? 1 : 0.6 }}
         disabled={status === "sending"}
       >
         {status === "sending" ? "..." : t("contact.submit")}
